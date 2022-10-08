@@ -1,1 +1,351 @@
-* {color: green}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width:375px;
+    margin:1em auto;
+    font-family: "Open Sans";
+    border:1px solid #bbbbc0;
+}
+
+section#logo {
+    height: 73px;
+    padding: 0.25em 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+}
+
+section#logo a {
+    justify-self: end;
+}
+
+.header-subtext {
+  font-size: 9px;
+  color:#84848a;
+}
+
+section#logo ul {
+    list-style: none;
+    font-size: 11px;
+}
+
+/* MOBILE APP DOWNLOAD SPLASH */
+
+section#mobile-app-splash {
+    background: #313c5e;
+    color:white;
+    padding:35px;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items:end;
+    align-content:flex-start;
+    position: relative;
+}
+
+#mobile-app-splash> img {
+    grid-column: 2/3;
+}
+
+#mobile-app-splash h2 {
+    color: #f7941e;
+    text-transform: uppercase;
+    letter-spacing: -0.75px;
+    font: 38px "Roboto Slab", sans-serif;
+    margin:2rem 0 1rem;
+    grid-column: 1/span 3;
+}
+
+#mobile-app-splash p {
+    grid-column: 1/4;
+    line-height: 26px;
+    font-size: 18px;
+}
+
+#mobile-app-splash button {
+    color: white;
+    background:#f7941e;
+    border:0px none;
+    height: 49px;
+    width: 100%;
+    border-radius: .5rem;
+    margin: 3rem 0 2rem;
+    font: bold 18px Mulish, sans-serif;
+    grid-column: 1/4;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#mobile-app-splash button:active {
+    background: #fff;
+    color:#f7941e;
+}
+
+
+/* HAMBURGER MENU (MOBILE) */
+
+#hamburger-menu {
+    width: 30px;
+    height: 18px;
+    display: block;
+    grid-column:3/span 1;
+    position: sticky;
+    right:20px;
+    top:2rem;
+}
+
+#hamburger-menu label {
+    background-color: #313c5e;
+    display:block;
+    cursor: pointer;
+    position: relative;
+    z-index:3;
+}
+
+#hamburger-menu hr {
+    background:#f7941e;
+    height: 2px;
+    border:0px none;
+    margin-top:4px;
+}
+
+#hamburger-on-off {
+    display:none;
+}
+
+#hamburger-on-off + label + ul {
+  margin:-3.625rem 0 0 -308px;  
+  position:sticky;
+  width:373px;
+  padding:2rem;
+  text-align: center;
+  background:#313c5e;
+  color:#f7941e;
+  display:none;
+  list-style: none;
+}
+
+#hamburger-on-off + label + ul li {
+    margin-bottom: 1rem;
+}
+
+#hamburger-on-off + label + ul li a {
+    display: block;
+    color:#f7941e;  
+}
+
+#hamburger-on-off + label + ul li a:hover {
+    color:white;
+}
+
+/* Hamburger menu activated */
+
+#hamburger-on-off:checked + label + ul {
+    display:block;
+}
+
+
+/* SEARCH PANEL */
+
+#search {
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    background: url('/assets/images/mobile-search-bg.png') no-repeat 0 18px;
+    backdrop-filter: blur(5px);
+}
+
+#search::after {
+    content:"";
+    display: block;
+    width:1700px;
+    height:1700px;
+    border-radius: 50%;
+    margin: -1670px 0 0 -700px;
+    background-color: #313c5e;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+}
+
+#search::before {
+    content:"";
+    display: block;
+    width:1700px;
+    height:1700px;
+    border-radius: 50%;
+    margin: -1662px 0 0 -650px;
+    background-color:#f7941e;
+    position: absolute;
+    z-index: 0;
+}
+
+#search > img {
+    position: absolute;
+    z-index: 1;
+    right:10px;
+}
+
+#search h2 {
+    color: #fff;
+    margin: 4.5rem 0 0.5rem 2.25rem;
+    text-transform: uppercase;
+    font:bold 28px "Roboto Slab", sans-serif;
+    letter-spacing: -1.5px
+}
+
+#search h4 {
+    color: #fff;
+    font: 14px Mulish, sans-serif;
+    padding-left:2.25rem;
+    margin-bottom: 0.5rem;
+}
+
+#search input {
+    height: 48px;
+    width: 335px;
+    display: block;
+    margin: 0 auto 3rem;
+    border-radius:24px;
+    font: 18px/3rem Mulish,sans-serif;
+    padding:0 1rem 0 3rem;
+    border:1px solid #84848a;
+    background: white url('/assets/images/search-icon.png') no-repeat 1rem center;
+
+}
+
+#search input::placeholder {
+    color:#C5C5C5;
+    display: inline-block;
+    padding-left: 2rem;
+    font: 18px Mulish,sans-serif;
+}
+
+
+/* Latest news panel */
+
+#latest-news {
+    background-color: #f7941e;
+    padding: 1rem 35px;
+}
+
+#latest-news h3 {
+    color: #fff;
+    font: bold 16px "Roboto Slab",sans-serif;
+    text-transform: uppercase;
+}
+
+#latest-news a {
+    color: #fff;
+    font:16px Mulish, sans-serif;
+    text-decoration: underline;
+    margin: 0.5rem 0;
+}
+
+#latest-news span {
+    color: #505050;
+    text-transform: uppercase;
+    font: 10px Mulish, sans-serif;
+}
+
+/* How to panel */
+
+#how-to {
+    padding: 3rem 35px;
+    background: #f3f3f3;
+}
+
+#how-to > div {
+    display: block;
+    margin-bottom:2rem;
+    width:303px;
+    height: 159px;
+    position: relative;
+}
+
+/* global classes */
+
+.dark-header {
+    color: #313c5e;
+    letter-spacing: -1.5px;
+    text-transform: uppercase;
+    font: bold 32px "Roboto Slab", sans-serif;
+}
+
+.recap {
+    color: #505050;
+    font:18px Mulish,sans-serif;
+    line-height: 26px;
+    /* letter-spacing: -.75px; */
+    margin: 2rem 0;
+
+}
+
+.body-copy {
+    color: #161616;
+    font: 14px/1.5 Mulish,sans-serif;
+    margin-bottom: 1rem;
+}
+
+.video::before {
+    content:"";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    position: absolute;
+    background: rgba(40,40,40,0.8);
+}
+
+ol.number {
+    list-style: none;
+    counter-reset: instructions;
+    color:#313c5e;
+    font: bold 16px/18px "Roboto Slab", sans-serif;
+    text-transform: uppercase;
+    margin-top: 2rem;
+}
+
+ol.number li {
+    margin:1rem 0;
+    padding-left: 53px;
+}
+
+ol.number li::before {
+    counter-increment: instructions;
+    content:counter(instructions);
+    width: 44px;
+    height: 44px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #313c5e;
+    color: #fff;
+    font:bold 26px/44px "Roboto Slab", sans-serif;
+    text-align: center;
+    margin-right: 0.5rem;
+    margin-left: -53px;
+    vertical-align: middle;
+}
+
+ol.number li strong {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* .number {
+
+} */
+
+/* mobile styles (for now defaults are mobile so empty) */
+@media screen and (max-width: 500px) {
+    header, main, footer {
+
+    }
+}
