@@ -301,6 +301,17 @@ section#mobile-app-splash {
     text-align: right;
 }
 
+.read-more-orange::after {
+    content: "";
+    display: inline-block;
+    margin: 0 1rem 0.1875rem 0.75rem;
+    height: 0.5rem;
+    width: 0.5rem;
+    transform: rotate(45deg);
+    border: solid #f7941e;
+    border-width: 0 2px 2px 0;
+}
+
 .body-copy {
     color: #161616;
     font: 14px/1.5 Mulish,sans-serif;
