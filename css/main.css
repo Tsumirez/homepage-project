@@ -11,6 +11,10 @@ body {
     border:1px solid #bbbbc0;
 }
 
+/* section {
+    padding: 3rem 35px;
+} */
+
 section#logo {
     height: 73px;
     padding: 0.25em 0.5em;
@@ -288,6 +292,15 @@ section#mobile-app-splash {
 
 }
 
+.read-more-orange {
+    color: #f7941e;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font: bold 1.125rem/1.5 "Mulish", sans-serif;
+    display: block;
+    text-align: right;
+}
+
 .body-copy {
     color: #161616;
     font: 14px/1.5 Mulish,sans-serif;
@@ -337,6 +350,27 @@ ol.number li::before {
 ol.number li strong {
     display: inline-block;
     vertical-align: middle;
+}
+
+/* Buy ticket section */
+
+#buy-ticket {
+    padding: 3rem 1.25rem;
+    background: rgba(49,60,94,0.1);
+}
+
+#buy-ticket article {
+    background:#fff;
+    border-radius: 0.5rem;
+    padding-bottom: 2rem;
+}
+
+#buy-ticket > p, #buy-ticket > h1 {
+    margin: 0 15px;
+}
+
+#buy-ticket article:hover {
+    max-height: 1200px;
 }
 
 /* .number {
