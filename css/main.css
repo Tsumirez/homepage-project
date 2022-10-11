@@ -162,7 +162,7 @@ button {
     background-color: #fff;
     overflow: hidden;
     position: relative;
-    background: url('assets/images/mobile-search-bg.png') no-repeat 0 18px;
+    background: url('../assets/images/mobile-search-bg.png') no-repeat 0 18px;
     backdrop-filter: blur(5px);
 }
 
@@ -221,7 +221,7 @@ button {
     font: 18px/3rem Mulish,sans-serif;
     padding:0 1rem 0 3rem;
     border:1px solid #84848a;
-    background: white url('assets/images/search-icon.png') no-repeat 1rem center;
+    background: white url('../assets/images/search-icon.png') no-repeat 1rem center;
 
 }
 
