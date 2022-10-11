@@ -73,7 +73,7 @@ section#mobile-app-splash {
     font-size: 18px;
 }
 
-#mobile-app-splash button {
+button {
     color: white;
     background:#f7941e;
     border:0px none;
@@ -162,7 +162,7 @@ section#mobile-app-splash {
     background-color: #fff;
     overflow: hidden;
     position: relative;
-    background: url('/assets/images/mobile-search-bg.png') no-repeat 0 18px;
+    background: url('assets/images/mobile-search-bg.png') no-repeat 0 18px;
     backdrop-filter: blur(5px);
 }
 
@@ -221,7 +221,7 @@ section#mobile-app-splash {
     font: 18px/3rem Mulish,sans-serif;
     padding:0 1rem 0 3rem;
     border:1px solid #84848a;
-    background: white url('/assets/images/search-icon.png') no-repeat 1rem center;
+    background: white url('assets/images/search-icon.png') no-repeat 1rem center;
 
 }
 
@@ -281,6 +281,20 @@ section#mobile-app-splash {
     letter-spacing: -1.5px;
     text-transform: uppercase;
     font: bold 32px "Roboto Slab", sans-serif;
+}
+
+.dark-panel {
+    background:#313c5e;
+    color:#fff;
+}
+
+.dark-panel > h2, .dark-panel p {
+    color: #fff;
+}
+
+.dark-panel > button {
+    width: 290px;
+    margin-left: 20px;
 }
 
 .recap {
@@ -370,14 +384,19 @@ ol.number li strong {
     background: rgba(49,60,94,0.1);
 }
 
-#buy-ticket article {
+section article {
     background:#fff;
     border-radius: 0.5rem;
     padding-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 #buy-ticket > p, #buy-ticket > h1 {
-    margin: 0 15px;
+    margin: 0 15px 2rem;
+}
+
+#buy-ticket > article > h2, #buy-ticket > article > p {
+    margin: 1rem 1.25rem;
 }
 
 #buy-ticket article:hover {
