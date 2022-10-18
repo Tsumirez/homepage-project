@@ -10,11 +10,11 @@ html {
 
 body {
     --orange: #f7941e;
-    --dark-gray:#505050;
+    --dark-gray: #505050;
     --dark-blue: #313c5e;
     --light-gray: #bbbbc0;
 
-    color:var(--dark-gray);
+    color: var(--dark-gray);
     width: 375px;
     margin: 1em auto;
     font: 0.875rem/1.5 Mulish, sans-serif;
@@ -30,11 +30,11 @@ h1 {
 h2 {
     margin-bottom: 2rem;
     font-size: 2rem;
-    color:var(--dark-blue);
+    color: var(--dark-blue);
 }
 
 h3 {
-  font-size: 1.625rem;
+    font-size: 1.625rem;
 }
 
 h4 {
@@ -71,7 +71,7 @@ section {
 section article {
     background: #fff;
     border-radius: 0.5rem;
-    padding:0 0.9375rem 2rem;
+    padding: 0 0.9375rem 2rem;
     margin-bottom: 1rem;
     width: 335px;
     margin-left: -15px;
@@ -81,7 +81,8 @@ section article img {
     margin-left: -0.9375rem;
 }
 
-section article h2, section article p {
+section article h2,
+section article p {
     margin: 1rem 0;
 }
 
@@ -112,7 +113,6 @@ button {
 }
 
 #hamburger-menu label {
-    background-color: var(--dark-blue);
     display: block;
     cursor: pointer;
     position: relative;
@@ -123,7 +123,13 @@ button {
     background: var(--orange);
     height: 2px;
     border: 0px none;
-    margin-top: 4px;
+    margin-top: 0.31rem;
+    transform-origin: 0 50%;
+    transition: transform 0.4s;
+}
+
+#hamburger-menu hr:first-of-type {
+    margin-top: 0;
 }
 
 #hamburger-on-off {
@@ -161,6 +167,18 @@ button {
     display: block;
 }
 
+#hamburger-on-off:checked+label>hr:first-of-type {
+    transform: rotate(45deg);
+}
+
+#hamburger-on-off:checked+label>hr:last-of-type {
+    transform: rotate(-45deg);
+}
+
+
+#hamburger-on-off:checked+label>hr:not(:first-of-type, :last-of-type) {
+    transform: scaleY(0);
+}
 
 /* Logo and header */
 
@@ -250,9 +268,9 @@ button:active {
     right: 10px;
 }
 
- #search h3 {
+#search h3 {
     margin: 4.5rem 0 0.5rem;
-} 
+}
 
 #search label {
     font-weight: bold;
@@ -314,7 +332,7 @@ button:active {
 
 /* global classes */
 .light-panel {
-    background-color:#f3f3f3;
+    background-color: #f3f3f3;
 }
 
 .light-panel h4 {
@@ -331,7 +349,7 @@ button:active {
 }
 
 .dark-panel h2 {
-    color:#fff;
+    color: #fff;
 }
 
 .read-more-orange {
@@ -402,7 +420,7 @@ ol.number li strong {
 /* Buy ticket section */
 /* FAQ */
 
-#faq > article {
+#faq>article {
     padding-bottom: 1rem;
     margin-bottom: 2rem;
 }
@@ -412,10 +430,10 @@ ol.number li strong {
 }
 
 dl input[type='checkbox'] {
-    display:none;
+    display: none;
 }
 
-dt > label {
+dt>label {
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -423,14 +441,14 @@ dt > label {
 }
 
 dt {
-    min-width:280px;
-    color:var(--dark-blue);
+    min-width: 280px;
+    color: var(--dark-blue);
     font: bold 1.125rem/1.5 Mulish, sans-serif;
     padding-top: 1rem;
 }
 
-dl > dt:not(dt:first-child) {
-    border-top:1px solid rgba(49, 60, 94, 0.1);
+dl>dt:not(dt:first-child) {
+    border-top: 1px solid rgba(49, 60, 94, 0.1);
 }
 
 dt>label::after {
@@ -444,22 +462,22 @@ dt>label::after {
     border-width: 0 2px 2px 0;
     flex-grow: 0;
     flex-shrink: 0;
-    transition:transform 0.25s;
+    transition: transform 0.25s;
 }
 
 input:checked+dt+dd {
-    max-height:30rem;
+    max-height: 30rem;
 }
 
 input:checked+dt>label::after {
-    transform:rotate(225deg);
+    transform: rotate(225deg);
 }
 
 dd {
     max-height: 0;
     overflow: hidden;
-    margin-bottom:1.25rem;
-    transition:max-height .5s;
+    margin-bottom: 1.25rem;
+    transition: max-height .5s;
     padding-top: 1rem;
 }
 
