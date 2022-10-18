@@ -1,84 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Open+Sans&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet"> 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Open+Sans&family=Roboto+Slab:wght@700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <title>Z biletem</title>
 </head>
+
 <body>
+    <aside id="hamburger-menu">
+        <input type="checkbox" id="hamburger-on-off">
+        <label for="hamburger-on-off">
+            <hr />
+            <hr />
+            <hr />
+            <hr />
+        </label>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#search">Znajdź swe miasto</a></li>
+            <li><a href="#how-to">Jak to działa</a></li>
+            <li><a href="#articles">Artykuły</a></li>
+            <li><a href="#faq">Często zadawane pytania</a></li>
+        </ul>
+    </aside>
+
     <!-- Header with main menu -->
-    <header>
-        <section id="logo">
-            x
-            <img src="assets/images/logo-orange.svg" alt="logo">
-            <ul>
-                <li>Zbiletem - bilety komunikacji</li>
-                <li class="header-subtext">Kupuj bilety mpk, ztm i mzk</li>
-                <li></li>
-                <li class="header-subtext">GET - on the App Store</li>
-            </ul>
-            <a href="/">View</a>
-        </section>
-        <!-- Hamburger Menu/Top links -->
+    <header id="home">
+        x
+        <img src="assets/images/logo-orange.png" alt="logo">
+        <ul>
+            <li>Zbiletem - bilety komunikacji</li>
+            <li class="header-subtext">Kupuj bilety mpk, ztm i mzk</li>
+            <li></li>
+            <li class="header-subtext">GET - on the App Store</li>
+        </ul>
+        <a href="/">View</a>
+    </header>
+
+    <main>
         <!-- Mobile app download section -->
-
-        <section id="mobile-app-splash">
+        <section id="mobile-app-splash" class="dark-panel">
             <img src="assets/images/logo-white.png" alt="logo">
-            <aside id="hamburger-menu">
-                <input type="checkbox" id="hamburger-on-off">
-                <label for="hamburger-on-off">
-                    <hr />
-                    <hr />
-                    <hr />
-                    <hr />
-                </label>
-                <ul>
-                    <li><a href="">Link1</a></li>
-                    <li><a href="">Link2</a></li>
-                    <li><a href="">Link3</a></li>
-                    <li><a href="">Link4</a></li>
-                </ul>
+            <!-- Hamburger Menu/Top links -->
 
-            </aside>
-            <h2>Yes we know…</h2>
-            <p>
-              We understand how inconvenient it is standing at a bus stop and trying to 
-              figure out how to buy your ticket. We truly do. We had the same problem. 
-              So that’s why we’ve developed an app for you, just to make things a bit easier when you’re out and about.
+            <h1>Yes we know…</h1>
+            <p class="recap">
+                We understand how inconvenient it is standing at a bus stop and trying to
+                figure out how to buy your ticket. We truly do. We had the same problem.
+                So that’s why we’ve developed an app for you, just to make things a bit easier when you’re out and
+                about.
             </p>
             <button>Pobierz tutaj</button>
         </section>
 
-        <section id="search">
+        <!-- Search Location -->
+        <section id="search" class="dark-panel">
             <img src="assets/images/messenger.png" alt="messenger">
-            <h2>Buy your ticket</h2>
-            <h4>Where are you?</h4>
+            <h3>Buy your ticket</h3>
+            <label>Where are you?</label>
             <input type="text" placeholder="Search">
         </section>
 
+        <!-- Latest News -->
         <section id="latest-news">
-            <h3>Latest news</h3>
-            <p><a href="/">Zwroty i wydłużenia biletów w związku z pandemią</a></p>
+            <h5>Latest news</h5>
+            <a href="/">Zwroty i wydłużenia biletów w związku z pandemią</a><br />
             <span>Published 27.09.2022</span>
         </section>
 
-        <section id="how-to">
-            <h1 class="dark-header">Zobacz jak to działa</h1>
-            <p class="recap">Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper.</p>
+        <!-- Intro/Instructions -->
+        <section id="how-to" class="light-panel">
+            <h2>Zobacz jak to działa</h2>
+            <p class="recap">Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta
+                felis euismod semper.</p>
             <div class="video">
                 <img src="assets/images/how-to-vid-thumb.png" alt="">
             </div>
 
 
-            <p class="body-copy">Maecenas sed diam eget risus varius blandit sit amet non magna. 
-                Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. 
+            <p>Maecenas sed diam eget risus varius blandit sit amet non magna.
+                Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
                 Etiam porta sem malesuada magna mollis euismod.
             </p>
-            <p class="body-copy">
-                Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. 
+            <p>
+                Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
                 Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra.
             </p>
 
@@ -89,55 +100,91 @@
             </ol>
         </section>
 
-        <section id="buy-ticket">
-            <h1 class="dark-header">Buy your ticket</h1>
-            <p class="recap">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. 
-                Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. 
+
+        <!-- more articles  -->
+
+        <section id="articles" class="light-gray-panel">
+            <h2 class="dark-header">Buy your ticket</h2>
+            <p class="recap">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur.
                 Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus.</p>
 
             <article>
                 <img src="assets/images/erik-mclean-BXiLSwwvqrY-unsplash.png" alt="">
                 <h2 class="dark-header">About our tickets</h2>
-                <p class="recap">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                <p class="recap">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                     Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-                    <a href="" class="read-more-orange">Read More</a>
+                <a href="" class="read-more-orange">Read More</a>
             </article>
 
             <article>
                 <img src="assets/images/erik-mclean-BXiLSwwvqrY-unsplash.png" alt="">
                 <h2 class="dark-header">About our App</h2>
-                <p class="recap">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                <p class="recap">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                     Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-                    <a href="" class="read-more-orange">Read More</a>
+                <a href="" class="read-more-orange">Read More</a>
             </article>
 
             <article>
                 <img src="assets/images/erik-mclean-BXiLSwwvqrY-unsplash.png" alt="">
                 <h2 class="dark-header">More about something</h2>
-                <p class="recap">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                <p class="recap">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                     Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-                    <a href="" class="read-more-orange">Read More</a>
+                <a href="" class="read-more-orange">Read More</a>
             </article>
 
             <article class="dark-panel">
                 <img src="assets/images/erik-mclean-BXiLSwwvqrY-unsplash.png" alt="">
                 <h2 class="dark-header">More about something</h2>
-                <p class="recap">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                <p class="recap">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                     Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-                    <button>Pobierz Tutaj</button>
+                <button>Pobierz Tutaj</button>
             </article>
         </section>
 
-        
-    </header>
-    <main>
+        <!-- Frequently Asked Questions -->
+
+        <section id="faq" class="light-panel">
+
+            <h2>Frequently Asked Questions</h2>
+            <p>Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                condimentum nibh.</p>
+            <article class="light-gray-panel">
+                <dl>
+
+                    <input type="checkbox" id="FAQ-1">
+                    <dt>
+                        <label for="FAQ-1">What happens if my battery died?</label>
+                    </dt>
+                    <dd>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio reprehenderit fugit aperiam
+                        repellendus sint. Itaque iusto eveniet ad nostrum iste.
+                    </dd>
+
+                    <input type="checkbox" id="FAQ-2">
+                    <dt> <label for="FAQ-2">Quam Risus Nibh?</label></dt>
+                    <dd>Lorem ipsum dolor, sit amet consectetur adipisicing.</dd>
+
+                    <input type="checkbox" id="FAQ-3">
+                    <dt><label for="FAQ-3">Morbi leo risus, porta ac consectetur ac, vestibulum at eros?</label></dt>
+                    <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, aliquid ab?</dd>
+
+                    <input type="checkbox" id="FAQ-4">
+                    <dt> <label for="FAQ-4">Nulla vitae elit libero?</label></dt>
+                    <dd>Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor
+                        fringilla. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed
+                        consectetur. Nullam quis risus eget urna mollis ornare vel eu leo.</dd>
+
+                </dl>
+
+            </article>
+
+            <h4>Did you find what you were looking for?</h4>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Duis
+                mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+        </section>
 
     </main>
-
-    <!-- Search bar section -->
-    <!-- Articles -->
-      <!-- FAQ -->
-      <!-- About us -->
-    <!-- Footer -->
 </body>
+
 </html>
