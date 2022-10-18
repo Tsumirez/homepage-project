@@ -216,7 +216,7 @@ section#mobile-app-splash {
 }
 
 #mobile-app-splash>img {
-    margin: 2rem 0 0 50%;
+    margin: 0 0 2rem 50%;
     transform: translateX(-50%);
 }
 
