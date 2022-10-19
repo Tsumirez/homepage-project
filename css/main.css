@@ -284,9 +284,12 @@ button:active {
     border-radius: 1.5rem;
     font: 1.125rem/3rem Mulish, sans-serif;
     padding: 0 1rem 0 3rem;
-    border: 1px solid #84848a;
-    background: white url('../assets/images/search-icon.png') no-repeat 1rem center;
+    border: 1px solid #fff;
+    outline: 0;
 
+    background: white url('../assets/images/search-icon.png') no-repeat 1rem center;
+    position: relative;
+    z-index: 1;
 }
 
 #search input::placeholder {
@@ -294,6 +297,39 @@ button:active {
     display: inline-block;
     padding-left: 2rem;
     font-size: 1.125rem;
+}
+
+.autocomplete {
+    background: #fff;
+    width:335px;
+    min-height: 3rem;
+    margin:-3.4rem 0 0 -0.9375rem;
+    border-radius: 1.5rem;
+    position: relative;
+    z-index: 0;
+    padding: 2rem 0 0.5rem;
+    color:#505050;
+    overflow: hidden;
+}
+
+.autocomplete p {
+    cursor: pointer;
+    margin: 0;
+    padding:0 0 0 3rem;
+    font: 1.125rem/3rem Mulish, sans-serif;
+}
+
+.autocomplete p > a {
+    display:block;
+    height:100%;
+}
+
+.autocomplete p:first-of-type {
+    margin-top: 2rem;
+}
+
+.autocomplete p:hover {
+    background-color: #f3f3f3;
 }
 
 
