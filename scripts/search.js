@@ -39,9 +39,16 @@ cities.set('Zgierz','zgierz');
 //Event listener for user typing in search input
 searchInput.addEventListener("input", e => {
     let resultsHTML = "";
+    let searchTerm = e.target.value.toLowerCase();
 
-    e.target.value.length && cities.forEach((cityLink, cityName) => {
-        if (cityName.toLowerCase().includes(e.target.value.toLowerCase())) {
+    // e.target.value.length && cities.forEach((cityLink, cityName) => {
+    //     if (cityName.toLowerCase().includes(e.target.value.toLowerCase())) {
+    //         resultsHTML += `<p><a href="https://zbiletem.pl/ticket/${cityLink}">${cityName}</a></p>`
+    //     }
+    // })
+
+    e.target.value.length && cities.forEach((cityLink, cityName) =>{
+        if(cityName.substring(0,searchTerm.length).toLowerCase() === searchTerm) {
             resultsHTML += `<p><a href="https://zbiletem.pl/ticket/${cityLink}">${cityName}</a></p>`
         }
     })
