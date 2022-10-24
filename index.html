@@ -10,10 +10,41 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <script src="./scripts/search.js" type="text/javascript" defer></script>
+
     <title>Z biletem</title>
 </head>
 
 <body>
+    <!-- Messenger Wtyczka czatu Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Wtyczka czatu code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "102604065990080");
+        chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v15.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/pl_PL/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
     <aside id="hamburger-menu">
         <input type="checkbox" id="hamburger-on-off">
         <label for="hamburger-on-off">
@@ -59,7 +90,7 @@
             </p>
             <a href="https://play.google.com/store/apps/details?id=zbiletem.zbiletem&hl=pl&gl=US">
                 <button>Pobierz tutaj</button>
-                </a>
+            </a>
         </section>
 
         <!-- Search Location -->
