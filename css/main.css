@@ -327,7 +327,7 @@ button:active {
     margin-top: 2rem;
 }
 
-#search .autocomplete p:hover {
+div.autocomplete p:hover {
     background-color: #f3f3f3;
 }
 
