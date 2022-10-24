@@ -262,11 +262,11 @@ button:active {
     z-index: 0;
 }
 
-#search>img {
+/* #search>img {
     position: absolute;
     z-index: 1;
     right: 10px;
-}
+} */
 
 #search h3 {
     margin: 4.5rem 0 0.5rem;
