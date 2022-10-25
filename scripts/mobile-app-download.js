@@ -2,7 +2,7 @@
 
 let downloadLink = document.querySelector("#mobile-app-splash > a");
 let userAgent = window.navigator.userAgent;
-let isItApple = ((userAgent.indexOf(" Mac Os") +1) || (userAgent.indexOf(" Darwin")+1) || (userAgent.indexOf("iOS")+1));
+let isItApple = ((userAgent.indexOf(" Mac OS") +1) || (userAgent.indexOf(" Darwin")+1) || (userAgent.indexOf("iOS")+1));
 
 
 if(isItApple) {
