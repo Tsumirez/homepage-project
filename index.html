@@ -10,6 +10,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <script src="./scripts/search.js" type="text/javascript" defer></script>
+    <script src="./scripts/mobile-app-download.js" type="text/javascript" defer></script>
+
 
     <title>Z biletem</title>
 </head>
@@ -28,7 +30,7 @@
         chatbox.setAttribute("attribution", "biz_inbox");
     </script>
 
-    <!-- Your SDK code -->
+    <!-- Facebook Messenger Plugin Code -->
     <script>
         window.fbAsyncInit = function () {
             FB.init({
@@ -45,6 +47,9 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
+
+
+    <!-- Hamburger menu (for mobile) -->
     <aside id="hamburger-menu">
         <input type="checkbox" id="hamburger-on-off">
         <label for="hamburger-on-off">
