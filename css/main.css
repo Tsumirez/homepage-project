@@ -760,6 +760,10 @@ dd {
 }
 
 @media screen and (max-width: 849px) {
+    #mobile-app-hero h1 {
+        font-size: 2.375rem;
+    }
+
 
     #mobile-app-hero aside {
         display: none;
