@@ -237,6 +237,8 @@ header ul {
 nav a {
     color: var(--orange);
     text-transform: uppercase;
+    font-size: 1.25rem;
+    padding-top:0.5rem;
 }
 
 nav a:first-of-type {
@@ -752,6 +754,13 @@ dd {
 
 
 @media screen and (max-width: 1050px) {
+    nav a {
+        font-size: 1rem;
+    }
+
+    nav a:first-of-type {
+        margin-left:5%;
+    }
 
     #articles,
     #how-to {
@@ -774,7 +783,7 @@ dd {
     }
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 780px) {
     header {
         display: flex;
     }
