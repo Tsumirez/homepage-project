@@ -9,9 +9,12 @@ hamburgerLinks.forEach(link => {
     link.addEventListener("click",()=> {
         hamburgerMenuCheckbox.checked = false;
     })
-
-    //if the link is for the search box, give it focus after clicking the link.
-    if(link.href.split("#").pop() =="search") {
-        link.addEventListener("click", () => setTimeout(() => citySearchInput.focus(),250))
-    }
 })
+
+
+//this script finds links pointing to search box, and focuses it's input when such a link is clicked
+let = searchLinks = document.querySelectorAll("a[href$='search'");
+
+searchLinks.forEach(link => {
+    link.addEventListener("click", () => setTimeout(() => citySearchInput.focus(),250))
+});
