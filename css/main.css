@@ -241,6 +241,10 @@ nav a {
     padding-top:0.5rem;
 }
 
+nav a:hover {
+    color:#fff;
+}
+
 nav a:first-of-type {
     margin-left:15%;
 }
@@ -294,13 +298,18 @@ section#mobile-app-splash {
 }
 
 #mobile-app-hero aside > a > img {
-    width: 150px;
+    /* width: 150px; */
 }
 
-/* #mobile-app-splash>img {
-    margin: 0 0 2rem 50%;
-    transform: translateX(-50%);
-} */
+.android-badge {
+    width:150px;
+    height:65px;
+}
+
+.apple-badge {
+    width: 150px;
+    height: 40px;
+}
 
 #mobile-app-splash > a button {
   display: none;
@@ -648,7 +657,7 @@ dd {
     overflow: hidden;
     margin-bottom: 1.25rem;
     transition: max-height .5s;
-    padding-top: 1rem;
+    padding: 1rem 0 0 2rem;
 }
 
 
