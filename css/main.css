@@ -20,12 +20,13 @@ body {
     margin: 0 auto 1rem;
     font: 0.875rem/1.5 Mulish, sans-serif;
     border: 1px solid #bbbbc0;
+    overflow-x: hidden;
 }
 
 h1 {
     color: var(--orange);
     /* font-size: 2.375rem; */
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 h2 {
@@ -46,6 +47,7 @@ h4 {
 
 h5 {
     font-size: 1rem;
+    margin: 1rem auto;
 }
 
 h1,
@@ -234,6 +236,18 @@ header ul {
 
 /* MOBILE APP DOWNLOAD SPLASH */
 
+section#mobile-app-splash {
+    position: relative;
+    padding-top: 2rem;
+    z-index:2;
+}
+
+#mobile-app-splash nav  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 nav a {
     color: var(--orange);
     text-transform: uppercase;
@@ -249,27 +263,9 @@ nav a:first-of-type {
     margin-left:15%;
 }
 
-#mobile-app-splash nav  {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#mobile-app-splash>* {
-    position: relative;
-    z-index: 3;
-}
-
-section#mobile-app-splash {
-    position: relative;
-    padding-top: 2rem;
-}
-
 #mobile-app-hero {
     display: grid;
-    /* grid-template-columns: repeat(auto-fit,minmax(335px, max(45%, 750px))); */
-    grid-template-columns: 35% 65%;
+    grid-template-columns: 35% auto auto;
     align-items: center;
     gap:2rem;
     margin-top: 5rem;
@@ -277,19 +273,15 @@ section#mobile-app-splash {
 
 #mobile-app-hero aside {
     grid-row: 1/3;
-    grid-column: 2;
-    display: grid;
-    grid-template-columns: 50% 25% 25%;
-    align-items: center;
-    justify-items: center;
+    grid-column: 3;
+    text-align: center;
 }
 
-#apple-badge {
-    grid-column:2;
-}
 
 #mobile-app-hero h1 {
     align-self:flex-end;
+    margin: 0 auto;
+    text-align: left;
 }
 
 #mobile-app-hero p {
@@ -297,17 +289,18 @@ section#mobile-app-splash {
     align-self: flex-start;
 }
 
-#mobile-app-hero aside > a > img {
-    /* width: 150px; */
+#mobile-app-hero > img {
+    grid-row: 1/3;
+    grid-column: 2;
 }
 
-.android-badge {
+.android-badge, .apple-badge {
     width:150px;
     height:65px;
+    vertical-align: middle;
 }
 
 .apple-badge {
-    width: 150px;
     height: 40px;
 }
 
@@ -318,10 +311,6 @@ section#mobile-app-splash {
 button:active {
     background: #fff;
     color: var(--orange);
-}
-
-.mobile-qr-download {
-    grid-column:span 2;
 }
 
 /* soft rounded navy color border extenting from dark blue colored panel above */
@@ -335,7 +324,7 @@ button:active {
     margin: -445.497% 0 0 -183.735%;
     background-color: #313c5e;
     position: absolute;
-    z-index: 2;
+    z-index: -1;
     top: 100%;
 }
 
@@ -349,7 +338,7 @@ button:active {
     margin: -444.25% 0 0 -172.4%;
     background-color: var(--orange);
     position: absolute;
-    z-index: 2;
+    z-index: -1;
     top: 100%;
 }
 
@@ -368,17 +357,7 @@ button:active {
     margin-right: auto;
     text-align: center;
     z-index: 3;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around; */
 }
-
-/* #search>img {
-    position: absolute;
-    z-index: 1;
-    right: 10px;
-} */
 
 #search h3 {
     margin: 0 0 4rem;
@@ -405,7 +384,7 @@ button:active {
     text-align: left;
     background: white url('../assets/images/search-icon.png') no-repeat 1rem center;
     position: relative;
-    z-index: 1;
+    z-index: 904;
 }
 
 #search input::placeholder {
@@ -737,23 +716,23 @@ dd {
 @media screen and (max-width: 1400px) {
     #mobile-app-hero h1 {
         text-align: center;
-        grid-column: 1/3;
+        grid-column: 1/4;
         grid-row: 1;
     }
 
     #mobile-app-hero p {
-        grid-column: 1/3;
+        grid-column: 1/4;
         grid-row: 2;
     }
 
     #mobile-app-hero aside {
-        grid-column:1/3;
+        grid-column:3/4;
         grid-row: 3/5;
     }
 
-    h1 {
-        grid-column: 1/4;
-        grid-row: 1;
+    #mobile-app-hero > img {
+        grid-row: 3/5;
+        grid-column: 1;
     }
 
     nav a:first-of-type {
@@ -775,6 +754,10 @@ dd {
     #how-to {
         grid-template-columns: 100%;
     }
+
+    #mobile-app-hero > img, #mobile-app-hero aside {
+        transform:scale(80%);
+    }
 }
 
 @media screen and (max-width: 849px) {
@@ -783,7 +766,7 @@ dd {
     }
 
 
-    #mobile-app-hero aside {
+    #mobile-app-hero aside, #mobile-app-hero > img {
         display: none;
     }
 
