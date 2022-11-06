@@ -25,8 +25,8 @@ body {
 
 h1 {
     color: var(--orange);
-    /* font-size: 2.375rem; */
     font-size: 3rem;
+    margin: 0 auto;
 }
 
 h2 {
@@ -74,7 +74,6 @@ p.recap {
 }
 
 section {
-    padding: 3rem 2.1875rem;
     padding: 3rem 10.41%;
 }
 
@@ -93,8 +92,6 @@ section article>*:not(:first-child) {
 }
 
 section article img {
-    /* margin-left: -4.7%; */
-    /* width: calc(100% + 9.34%); */
     width: 100%;
 }
 
@@ -248,6 +245,7 @@ section#mobile-app-splash {
     align-items: center;
 }
 
+/* Top navigation & links */
 nav a {
     color: var(--orange);
     text-transform: uppercase;
@@ -263,12 +261,15 @@ nav a:first-of-type {
     margin-left:15%;
 }
 
+/* Main header panel with mobile app download QR code and links */
+
 #mobile-app-hero {
     display: grid;
     grid-template-columns: 35% auto auto;
+    justify-items: center;
     align-items: center;
-    gap:2rem;
     margin-top: 5rem;
+    gap:2rem;
 }
 
 #mobile-app-hero aside {
@@ -280,8 +281,6 @@ nav a:first-of-type {
 
 #mobile-app-hero h1 {
     align-self:flex-end;
-    margin: 0 auto;
-    text-align: left;
 }
 
 #mobile-app-hero p {
