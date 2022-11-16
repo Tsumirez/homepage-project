@@ -517,6 +517,7 @@ div.autocomplete p:hover {
     transform: rotate(45deg);
     border: solid var(--orange);
     border-width: 0 2px 2px 0;
+    transition: 0.5s transform;
 }
 
 .video::before {
@@ -570,6 +571,7 @@ ol.number li strong {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, max(48%, 400px)));
     justify-content: center;
+    align-items: flex-start;
     gap: 1rem 2rem;
 }
 
@@ -579,6 +581,43 @@ ol.number li strong {
 
 #articles article {
     max-width: 750px;
+}
+
+input.read-more {
+    display: none;
+}
+
+.read-more + div {
+    max-height:0;
+    overflow: hidden;
+    margin-bottom:1rem;
+    transition: 1s max-height;
+}
+
+.read-more:checked + div {
+    max-height: 15rem;
+}
+
+.read-more + div + label.read-more-orange {
+    cursor:pointer;
+}
+
+.read-more:checked + div + label.read-more-orange {
+    text-decoration: none;
+    color:var(--dark-blue)
+}
+
+.read-more + div + label.read-more-orange::before {
+    content:"Read more";
+  }
+
+.read-more:checked + div + label.read-more-orange::before {
+  content:"close";
+}
+
+.read-more:checked + div + label.read-more-orange::after {
+    border-color: var(--dark-blue);
+    transform: rotate(-135deg);
 }
 
 /* FAQ */
