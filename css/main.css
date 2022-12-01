@@ -258,7 +258,7 @@ nav a:hover {
 }
 
 nav a:first-of-type {
-    margin-left:15%;
+    margin-left:10%;
 }
 
 /* Main header panel with mobile app download QR code and links */
@@ -467,11 +467,8 @@ div.autocomplete p:hover {
 }
 
 #how-to>div {
-    display: block;
-    margin-bottom: 2rem;
     width: 100%;
     position: relative;
-    grid-row: span 3;
 }
 
 #how-to>div>img {
@@ -520,7 +517,7 @@ div.autocomplete p:hover {
     transition: 0.5s transform;
 }
 
-.video::before {
+/* .video::before {
     content: "";
     display: block;
     width: 100%;
@@ -528,7 +525,7 @@ div.autocomplete p:hover {
     border-radius: 0.5rem;
     position: absolute;
     background: rgba(40, 40, 40, 0.8);
-}
+} */
 
 ol.number {
     list-style: none;
@@ -536,7 +533,6 @@ ol.number {
     color: #313c5e;
     font: bold 1rem/1.125rem "Roboto Slab", sans-serif;
     text-transform: uppercase;
-    margin-top: 2rem;
 }
 
 ol.number li {
@@ -571,7 +567,6 @@ ol.number li strong {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, max(48%, 400px)));
     justify-content: center;
-    align-items: flex-start;
     gap: 1rem 2rem;
 }
 
@@ -583,19 +578,24 @@ ol.number li strong {
     max-width: 750px;
 }
 
+#articles article:last-of-type:not(:nth-of-type(even)) {
+    grid-column: 1/-1;
+    max-width: none;
+}
+
 input.read-more {
     display: none;
 }
 
 .read-more + div {
-    max-height:0;
+    max-height:6rem;
     overflow: hidden;
     margin-bottom:1rem;
     transition: 1s max-height;
 }
 
 .read-more:checked + div {
-    max-height: 15rem;
+    max-height: 45rem;
 }
 
 .read-more + div + label.read-more-orange {
@@ -755,6 +755,14 @@ dd {
 }
 
 @media screen and (max-width: 1400px) {
+    nav a:first-of-type {
+        margin-left:5%;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
     #mobile-app-hero {
         grid-template-columns: 50% 50%;
         justify-items: center;
@@ -795,12 +803,16 @@ dd {
     }
 
     nav a:first-of-type {
-        margin-left:5%;
+        margin-left:0;
     }
 
     #articles,
     #how-to {
         grid-template-columns: 100%;
+    }
+
+    #articles article:last-of-type:not(:nth-of-type(even)) {
+        max-width: 750px;
     }
 }
 
