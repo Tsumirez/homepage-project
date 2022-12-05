@@ -237,6 +237,7 @@ section#mobile-app-splash {
     position: relative;
     padding-top: 2rem;
     z-index: 2;
+    overflow-x: clip;
 }
 
 #mobile-app-splash nav {
