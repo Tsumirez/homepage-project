@@ -62,8 +62,7 @@
             </li>
             <li><a href="#search">Znajdź miasto</a></li>
             <li><a href="#how-to">Bilety w aplikacji</a></li>
-            <li><a href="#articles">O nas</a></li>
-            <li><a href="#faq">Dla miast</a></li>
+            <li><a href="#cities">Dla miast</a></li>
             <li><a href="https://zbiletem.pl/Account/Login">Zaloguj</a></li>
             <li><a href="https://play.google.com/store/apps/details?id=zbiletem.zbiletem">Pobierz</a></li>
         </ul>
@@ -88,13 +87,16 @@
         <section id="mobile-app-splash" class="dark-panel">
             <nav>
                 <img src="assets/images/logo-white.png" alt="logo">
-                <a href="#home">Start</a></li>
-                <a href="#search">Znajdź miasto</a>
-                <a href="#how-to">Bilety w aplikacji</a>
-                <a href="#articles">O nas</a>
-                <a href="#faq">Dla miast</a>
-                <a href="https://zbiletem.pl/Account/Login">Zaloguj</a>
-                <a href="https://play.google.com/store/apps/details?id=zbiletem.zbiletem">Pobierz</a>
+                <!-- <div id="main-links"> -->
+                    <a href="#home">Start</a></li>
+                    <a href="#search">Znajdź miasto</a>
+                    <a href="#how-to">Bilety w aplikacji</a>
+                    <a href="#cities">Dla miast</a>
+                <!-- </div> -->
+                <div id="right-links">
+                    <a href="https://zbiletem.pl/Account/Login">Zaloguj</a>
+                    <a href="https://play.google.com/store/apps/details?id=zbiletem.zbiletem">Pobierz</a>
+                </div>
             </nav>
 
             <div id="mobile-app-hero">
@@ -198,7 +200,7 @@
                 </p>
             </article>
 
-            <article class="big-article">
+            <article id="cities">
                 <img src="assets/images/tram.webp" alt="">
                 <h2 class="dark-header">Dla miast i operatorów</h2>
                 <input type="checkbox" class="read-more" id="article3">
@@ -216,7 +218,8 @@
                         mobilnych w oparciu o kody QR w pojazdach.</p>
 
                     <p class="recap">Twoje bilety mogą się znaleźć w aplikacji zbiletem.pl już za kilka tygodni. Napisz
-                        na <a href="mailto:kontakt@zbiletem.pl">kontakt@zbiletem.pl</a> aby umówić spotkanie lub rozmowę.</p>
+                        na <a href="mailto:kontakt@zbiletem.pl">kontakt@zbiletem.pl</a> aby umówić spotkanie lub
+                        rozmowę.</p>
                 </div>
 
 
@@ -237,7 +240,7 @@
         <section id="faq" class="light-panel">
 
             <h2>Często zadawane pytania</h2>
-            
+
             <article class="light-gray-panel">
                 <dl>
 
@@ -306,48 +309,67 @@
 
                     <input type="checkbox" id="FAQ-9">
                     <dt> <label for="FAQ-9">Jak zwrócić bilet? </label></dt>
-                    <dd>Zwroty biletów są możliwe zgodnie z regulaminem zwrotów, który obowiązuje w danym mieście. 
-                        Zajrzyj na <a href="http://www.zbiletem.pl/zwrot">zbiletem.pl/zwrot</a> i sprawdź jak jest w Twoim mieście. 
-                        Jeśli chcesz zwrócić swój bilet napisz do nas na <a href="mailto:kontakt@zbiletem.pl">kontakt@zbiletem.pl</a>. 
+                    <dd>Zwroty biletów są możliwe zgodnie z regulaminem zwrotów, który obowiązuje w danym mieście.
+                        Zajrzyj na <a href="http://www.zbiletem.pl/zwrot">zbiletem.pl/zwrot</a> i sprawdź jak jest w
+                        Twoim mieście.
+                        Jeśli chcesz zwrócić swój bilet napisz do nas na <a
+                            href="mailto:kontakt@zbiletem.pl">kontakt@zbiletem.pl</a>.
                     </dd>
 
                     <input type="checkbox" id="FAQ-10">
-                    <dt> <label for="FAQ-10">Co jeśli transakcja się nie powiodła, nie widzę biletu a mój rachunek został obciążony?
-                    </label></dt>
-                    <dd>Czasami transakcje zakupu są anulowane np. z uwagi na zbyt długi czas procesowania.Wtedy bilet nie jest generowany, 
-                        ale Twój bank może chwilowo pokazywać obciążenie rachunku. W takiej sytuacji zwrot pieniędzy powinien być zrobiony automatycznie. 
-                        Poczekaj kilka godzin lub następnego dnia sprawdź swój rachunek. Jeśli nie otrzymasz zwrotu, koniecznie skontaktuj się z nami na <a href="mailto:kontakt@zbiletem.pl">kontakt@zbiletem.pl</a> 
+                    <dt> <label for="FAQ-10">Co jeśli transakcja się nie powiodła, nie widzę biletu a mój rachunek
+                            został obciążony?
+                        </label></dt>
+                    <dd>Czasami transakcje zakupu są anulowane np. z uwagi na zbyt długi czas procesowania.Wtedy bilet
+                        nie jest generowany,
+                        ale Twój bank może chwilowo pokazywać obciążenie rachunku. W takiej sytuacji zwrot pieniędzy
+                        powinien być zrobiony automatycznie.
+                        Poczekaj kilka godzin lub następnego dnia sprawdź swój rachunek. Jeśli nie otrzymasz zwrotu,
+                        koniecznie skontaktuj się z nami na <a href="mailto:kontakt@zbiletem.pl">kontakt@zbiletem.pl</a>
                         podając numer telefonu i datę transakcji. Wyjaśnimy i na pewno środki wrócą do Ciebie.
                     </dd>
-                    
+
                     <input type="checkbox" id="FAQ-11">
-                    <dt> <label for="FAQ-11">Dlaczego muszę podać numer PESEL przy zakupie imiennego biletu okresowego?</label></dt>
-                    <dd>Prosimy o numer PESEL pasażera, aby jednoznacznie określić właściciela biletu imiennego i zidentyfikować również podczas kontroli. 
-                        Dzięki temu, nawet jeśli masz problem z telefonem, lub rozładuje Ci się bateria, możesz spokojnie podróżować ponieważ w części miast 
-                        możemy sprawdzić ważność Twojego biletu właśnie poprzez numer PESEL. Twoje dane są bezpieczne i przetwarzane wyłącznie w celu obsługi 
-                        klienta i realizacji naszych zobowiązań wobec Ciebie. Kontroler nie ma dostępu do Twoich danych poza momentem kontroli.
+                    <dt> <label for="FAQ-11">Dlaczego muszę podać numer PESEL przy zakupie imiennego biletu
+                            okresowego?</label></dt>
+                    <dd>Prosimy o numer PESEL pasażera, aby jednoznacznie określić właściciela biletu imiennego i
+                        zidentyfikować również podczas kontroli.
+                        Dzięki temu, nawet jeśli masz problem z telefonem, lub rozładuje Ci się bateria, możesz
+                        spokojnie podróżować ponieważ w części miast
+                        możemy sprawdzić ważność Twojego biletu właśnie poprzez numer PESEL. Twoje dane są bezpieczne i
+                        przetwarzane wyłącznie w celu obsługi
+                        klienta i realizacji naszych zobowiązań wobec Ciebie. Kontroler nie ma dostępu do Twoich danych
+                        poza momentem kontroli.
                     </dd>
 
                     <input type="checkbox" id="FAQ-12">
-                    <dt> <label for="FAQ-12">Mam bilet okresowy a telefon się rozładował. Co zrobić w czasie kontroli?</label></dt>
-                    <dd>W niektórych miastach, jeżeli rozładowała Ci się bateria w telefonie, pokaż kontrolerowi dokument tożsamości z numerem PESEL. 
-                        To wystarczy żeby sprawdzić czy masz ważny bilet. Kontrola biletów poprzez numer PESEL nie może być zrealizowana w miastach: 
-                        Rybnik, Jastrzębie -zdrój, Gdańsk, Gdynia, Sopot, Wejherowo, w pociągach przewozów regionalnych w Łodzi.
-                        Pamiętaj też, że w wielu autobusach i pociągach są gniazda USB więc dobrze mieć przy sobie ładowarkę na czarną godzinę.
-                        
+                    <dt> <label for="FAQ-12">Mam bilet okresowy a telefon się rozładował. Co zrobić w czasie
+                            kontroli?</label></dt>
+                    <dd>W niektórych miastach, jeżeli rozładowała Ci się bateria w telefonie, pokaż kontrolerowi
+                        dokument tożsamości z numerem PESEL.
+                        To wystarczy żeby sprawdzić czy masz ważny bilet. Kontrola biletów poprzez numer PESEL nie może
+                        być zrealizowana w miastach:
+                        Rybnik, Jastrzębie -zdrój, Gdańsk, Gdynia, Sopot, Wejherowo, w pociągach przewozów regionalnych
+                        w Łodzi.
+                        Pamiętaj też, że w wielu autobusach i pociągach są gniazda USB więc dobrze mieć przy sobie
+                        ładowarkę na czarną godzinę.
+
                     </dd>
-                    
+
                     <input type="checkbox" id="FAQ-13">
                     <dt><label for="FAQ-13">Mojego miasta nie ma w aplikacji, kiedy będzie?</label></dt>
-                    <dd>Chcesz korzystać z apki, ale Twojego miasta jeszcze nie ma na naszej liście? Napisz do nas, jakie miasta powinny się u nas znaleźć, a my zrobimy wszystko aby tak się stało :). 
+                    <dd>Chcesz korzystać z apki, ale Twojego miasta jeszcze nie ma na naszej liście? Napisz do nas,
+                        jakie miasta powinny się u nas znaleźć, a my zrobimy wszystko aby tak się stało :).
                     </dd>
                 </dl>
 
             </article>
 
-            <h4>MASZ INNE PYTANIE? 
+            <h4>MASZ INNE PYTANIE?
             </h4>
-            <p>Napisz do nas nas e-mail na <a href="mailto:kontakt@zbiletem.pl">kontakt@zbiletem.pl</a>. Możesz skorzystać z tego <a href="https://zbiletem.pl/kontakt">formularza.</a> Znajdziesz nas też w mediach społecznościowych. Zwykle odpowiadamy bardzo szybko. </p>
+            <p>Napisz do nas nas e-mail na <a href="mailto:kontakt@zbiletem.pl">kontakt@zbiletem.pl</a>. Możesz
+                skorzystać z tego <a href="https://zbiletem.pl/kontakt">formularza.</a> Znajdziesz nas też w mediach
+                społecznościowych. Zwykle odpowiadamy bardzo szybko. </p>
         </section>
 
         <!-- Parnters section -->

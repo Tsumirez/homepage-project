@@ -251,15 +251,31 @@ nav a {
     color: var(--orange);
     text-transform: uppercase;
     font-size: 1.25rem;
-    padding-top: 0.5rem;
+    padding: .25rem .5rem;
+    margin-top: 0.5rem;
 }
 
 nav a:hover {
     color: #fff;
 }
 
-nav a:first-of-type {
-    margin-left: 10%;
+nav img {
+    margin-right: 10%;
+}
+
+nav #right-links {
+    margin-top: .5rem;
+}
+
+nav #right-links a {
+    border: 1px solid var(--orange);
+    border-radius: .25rem;
+    font-weight: 800;
+    margin-top: .5rem
+}
+
+nav #right-links a:hover {
+    background-color: var(--orange);
 }
 
 /* Main header panel with mobile app download QR code and links */
@@ -267,35 +283,38 @@ nav a:first-of-type {
 #mobile-app-hero {
     display: grid;
     /* grid-template-columns: 35% auto auto; */
-    grid-template-columns: 40% 25% 25%;
+    grid-template-columns: repeat(20, 1fr);
     align-items: center;
     margin-top: 5rem;
-    gap: 2rem;
+    row-gap: 2rem;
 }
-
-#mobile-app-hero aside {
-    grid-row: 1/3;
-    grid-column: 3;
-    text-align: center;
-}
-
 
 #mobile-app-hero h1 {
     align-self: flex-end;
     margin-left: 0;
+    grid-column: 1/10;
+    grid-row: 1;
 }
 
 #mobile-app-hero p {
-    grid-column: 1/2;
+    grid-column: 1/10;
     align-self: flex-start;
     text-align: left;
+    grid-row: 2;
 }
 
 #mobile-app-hero>img {
     grid-row: 1/3;
-    grid-column: 2;
+    grid-column: 10/16;
     width: 100%;
 }
+
+#mobile-app-hero aside {
+    grid-row: 1/3;
+    grid-column: 16/21;
+    text-align: center;
+}
+
 
 .android-badge,
 .apple-badge {
@@ -757,12 +776,13 @@ dd {
 }
 
 @media screen and (max-width: 1400px) {
-    nav a:first-of-type {
-        margin-left: 5%;
-    }
 
     nav a {
         font-size: 1rem;
+    }
+
+    nav>img {
+        margin-right: 4%;
     }
 
     #mobile-app-hero {
@@ -793,20 +813,16 @@ dd {
         grid-column: 1;
         width: 75%;
     }
-
-    nav a:first-of-type {
-        margin-left: 7%;
-    }
 }
 
 
 @media screen and (max-width: 1050px) {
-    nav a {
-        font-size: 1rem;
+    #mobile-app-hero h1 {
+        width: 100%;
     }
 
-    nav a:first-of-type {
-        margin-left: 0;
+    nav>img {
+        margin-right: 0;
     }
 
     #articles,
@@ -816,6 +832,14 @@ dd {
 
     #articles article:last-of-type:not(:nth-of-type(even)) {
         max-width: 750px;
+    }
+
+    header {
+        display: flex;
+    }
+
+    nav>img {
+        display: none;
     }
 }
 
@@ -837,12 +861,6 @@ dd {
     #mobile-app-splash a>button {
         display: block;
     }
-}
-
-@media screen and (max-width: 780px) {
-    header {
-        display: flex;
-    }
 
     #hamburger-menu {
         display: block;
@@ -851,6 +869,9 @@ dd {
     #mobile-app-splash nav {
         display: none;
     }
+}
+
+@media screen and (max-width: 780px) {
 
     #mobile-app-hero h1 {
         width: 100%;
