@@ -374,7 +374,6 @@ button:active {
 
 #search {
     padding: 5% 0 0;
-    overflow: hidden;
     position: relative;
     background: url('../assets/images/tram-bg.webp') no-repeat 0 0/cover;
     backdrop-filter: blur(15px);
@@ -410,7 +409,7 @@ button:active {
     text-align: left;
     background: white url('../assets/images/search-icon.png') no-repeat 1rem center;
     position: relative;
-    z-index: 904;
+    z-index: 2;
 }
 
 #search input::placeholder {
@@ -426,12 +425,14 @@ button:active {
     min-height: 3rem;
     margin: -3.4rem auto 0;
     border-radius: 1.5rem;
-    position: relative;
-    z-index: 0;
+    position: absolute;
+    z-index: 1;
     padding: 2rem 0 0.5rem;
     color: #505050;
     overflow: hidden;
     text-align: left;
+    left: 50%;
+    transform:translateX(-50%);
 }
 
 .autocomplete p {
