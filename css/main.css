@@ -271,6 +271,7 @@ nav #right-links a {
     border: 1px solid var(--orange);
     border-radius: .25rem;
     font-weight: 800;
+    padding: .25rem .5rem
 }
 
 nav #right-links a:first-of-type {
