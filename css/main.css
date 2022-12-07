@@ -374,7 +374,7 @@ button:active {
 /* SEARCH PANEL */
 
 #search {
-    padding: 5% 0 0;
+    padding: 5% 0 3rem;
     position: relative;
     background: url('../assets/images/tram-bg.webp') no-repeat 0 0/cover;
     backdrop-filter: blur(15px);
@@ -401,7 +401,7 @@ button:active {
     min-width: 335px;
     width: 35.3%;
     display: block;
-    margin: 0.5rem auto 0.5rem;
+    margin: 0.5rem auto 3rem;
     border-radius: 1.5rem;
     font: 1.125rem/3rem Mulish, sans-serif;
     padding: 0 1rem 0 3rem;
@@ -424,7 +424,7 @@ button:active {
     min-width: 335px;
     width: 35.3%;
     min-height: 3rem;
-    margin: -3.4rem auto 0;
+    margin: -6rem auto 0;
     border-radius: 1.5rem;
     position: absolute;
     z-index: 1;
@@ -463,7 +463,6 @@ div.autocomplete p:hover {
     background-color: var(--orange);
     padding-top: 1rem;
     padding-bottom: 1rem;
-    margin-top: 3rem;
     text-align: left;
 }
 
