@@ -419,7 +419,15 @@ button:active {
     font-size: 1.125rem;
 }
 
+#search input:not(:focus) + .autocomplete {
+    animation-name: hide;
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+}
+
 .autocomplete {
+    max-height: max-content;
+    transition: opacity 1s;
     background: #fff;
     min-width: 335px;
     width: 35.3%;
@@ -454,6 +462,12 @@ button:active {
 
 div.autocomplete p:hover {
     background-color: #f3f3f3;
+}
+
+@keyframes hide {
+    0% {max-height: max-content;}
+    99% {max-height: max-content;}
+    100% {max-height: 3rem;}
 }
 
 
