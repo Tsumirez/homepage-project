@@ -12,3 +12,13 @@ rightArrow.addEventListener('click',(e)=> {scroll(e, scrollXDistance)});
 function scroll(e, scrollXDistance) {
     imageContainer.scrollBy(scrollXDistance,0);
 }
+
+// "read more" functionality script
+
+let readMoreInputs = document.querySelectorAll("input.read-more");
+readMoreInputs.forEach(input => {
+    input.checked=false;
+    var realHeight = input.nextElementSibling.offsetHeight;
+    input.nextElementSibling.style.maxHeight = `${realHeight}px`;
+    input.checked = true;
+})

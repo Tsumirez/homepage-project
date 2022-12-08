@@ -627,34 +627,35 @@ input.read-more {
 }
 
 .read-more+div {
-    max-height: 6rem;
+    max-height: max-content;
     overflow: hidden;
     margin-bottom: 1rem;
-    transition: 1s max-height;
+    transition: max-height 1s;
+    text-overflow: ellipsis;
 }
 
 .read-more:checked+div {
-    max-height: 55rem;
+    max-height: 6rem !important;
 }
 
 .read-more+div+label.read-more-orange {
     cursor: pointer;
 }
 
-.read-more:checked+div+label.read-more-orange {
+.read-more:not(:checked)+div+label.read-more-orange {
     text-decoration: none;
     color: var(--dark-blue)
 }
 
 .read-more+div+label.read-more-orange::before {
-    content: "wiecej..";
-}
-
-.read-more:checked+div+label.read-more-orange::before {
     content: "zamknij";
 }
 
-.read-more:checked+div+label.read-more-orange::after {
+.read-more:checked+div+label.read-more-orange::before {
+    content: "wiecej..";
+}
+
+.read-more:not(:checked)+div+label.read-more-orange::after {
     border-color: var(--dark-blue);
     transform: rotate(-135deg);
 }
