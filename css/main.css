@@ -70,7 +70,7 @@ p {
 p.recap {
     font-size: 1.125rem;
     max-width: 812px;
-    text-align: center;
+    text-align: justify;
     grid-column: 1/-1;
     margin: 2rem auto;
 }
