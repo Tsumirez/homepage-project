@@ -14,7 +14,7 @@ body {
     --dark-blue: #313c5e;
     --light-gray: #bbbbc0;
 
-    --articles-panel-height: 14rem;
+    --articles-panel-height: calc(1.125rem * 8 * 1.5 + 1rem);
 
     color: var(--dark-gray);
     min-width: 375px;
@@ -244,7 +244,7 @@ section#mobile-app-splash {
 
 #mobile-app-splash nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -262,18 +262,22 @@ nav a:hover {
 }
 
 nav img {
-    margin-right: 10%;
+    margin-right: auto;
 }
 
 nav #right-links {
-    margin-top: .5rem;
+    margin-left: 2rem;
 }
 
 nav #right-links a {
     border: 1px solid var(--orange);
     border-radius: .25rem;
     font-weight: 800;
-    padding: .25rem .5rem
+    padding: .25rem .5rem;
+    width: 150px;
+    display: inline-block;
+    text-align: center;
+    height: 2.625rem;
 }
 
 nav #right-links a:first-of-type {
@@ -833,8 +837,14 @@ dd {
         font-size: 1rem;
     }
 
-    nav>img {
-        margin-right: 4%;
+    nav img {
+        height:80%;
+        width: 120px;
+    }
+
+    nav #right-links a {
+        height: 80%;
+        width: 120px;
     }
 
     #mobile-app-hero {
@@ -868,13 +878,9 @@ dd {
 }
 
 
-@media screen and (max-width: 1050px) {
-    #mobile-app-hero h1 {
-        width: 100%;
-    }
-
-    nav>img {
-        margin-right: 0;
+@media screen and (max-width: 1150px) {
+    nav #right-links {
+        margin-left:auto;
     }
 
     #articles,
@@ -895,7 +901,17 @@ dd {
     }
 }
 
-@media screen and (max-width: 849px) {
+@media screen and (max-width:940px) {
+    #mobile-app-splash nav {
+        align-items: start;
+    }
+    
+    nav #right-links a {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 780px) {
     #mobile-app-hero {
         grid-template-columns: 100%;
     }
