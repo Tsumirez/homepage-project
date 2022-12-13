@@ -755,16 +755,18 @@ dd {
 
 .gallery {
     display: flex;
-    align-items: center;
-    height: 6rem;
+    align-items: stretch;
+    margin-top: 3rem;
 }
 
 .gallery>p {
-    line-height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 3rem;
-    text-align: center;
     color: var(--orange);
     cursor: pointer;
+    margin: 0;
 }
 
 .gallery>p:hover {
@@ -774,7 +776,6 @@ dd {
 .gallery>p:first-of-type::before,
 .gallery>p:last-of-type::before {
     content: "";
-    display: inline-block;
     margin: 0 1rem 0.1875rem 0.75rem;
     height: 0.5rem;
     width: 0.5rem;
@@ -795,10 +796,10 @@ dd {
     align-items: stretch;
     justify-content: space-between;
     flex-wrap: nowrap;
-    height: 100%;
     overflow: hidden;
     scroll-behavior: smooth;
     width: 100%;
+    gap:1rem;
 }
 
 .gallery-images div {
