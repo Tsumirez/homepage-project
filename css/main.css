@@ -245,8 +245,11 @@ nav #right-links a {
     height: 2.625rem;
 }
 
+nav #right-links a:not(:last-of-type) {
+    margin-right: .5rem;
+}
+
 nav #right-links a:last-of-type {
-    margin-left: .5rem;
     background: var(--orange);
     color: white;
 }
@@ -929,7 +932,13 @@ dd {
         border: 0px none;
     }
 
+    nav #right-links a:last-of-type {
+        color: var(--orange);
+        background:transparent;
+    }
+
     nav #right-links a:hover {
+        color:white;
         background: transparent;
     }
 }
