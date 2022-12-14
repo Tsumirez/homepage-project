@@ -286,7 +286,7 @@ nav #right-links a:hover {
     grid-row: 1/3;
     grid-column: 10/16;
     height: 25rem;
-    justify-self: end;
+    justify-self: center;
 }
 
 #mobile-app-hero aside {
@@ -481,7 +481,7 @@ div.autocomplete p:hover {
 
 /* How to panel */
 
-#how-to {
+#how-to, #about-us {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, max(48%, 400px)));
     align-items: center;
@@ -737,6 +737,12 @@ dd {
     padding: 1rem 0 0 3%;
 }
 
+/* About us section - main styles are shared in How to section */
+
+#about-us p:not(.recap) {
+    align-self: flex-start;
+    font-size: 1rem;
+}
 
 /* Our Partners section */
 
