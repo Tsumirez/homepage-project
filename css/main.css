@@ -874,7 +874,7 @@ dd {
     }
 }
 
-@media screen and (max-width:940px) {
+@media screen and (max-width:950px) {
     #mobile-app-splash nav {
         align-items: start;
     }
@@ -884,7 +884,7 @@ dd {
     }
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 790px) {
     #mobile-app-hero {
         grid-template-columns: 100%;
     }
