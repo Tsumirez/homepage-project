@@ -205,7 +205,7 @@ header ul {
 section#mobile-app-splash {
     position: relative;
     padding-top: 2rem;
-    z-index: 2;
+    z-index: 3;
     overflow-x: clip;
 }
 
