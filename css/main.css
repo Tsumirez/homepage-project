@@ -383,8 +383,14 @@ nav #right-links a:hover {
 
 #search input::placeholder {
     color: #C5C5C5;
-    display: inline-block;
-    font-size: 1.125rem;
+}
+
+#search input:focus {
+    outline: solid #333 2px;
+}
+
+#search input:focus::placeholder {
+    color:transparent;
 }
 
 #search input:not(:focus)+.autocomplete {
