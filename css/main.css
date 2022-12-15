@@ -75,6 +75,32 @@ p.recap {
     margin: 2rem auto;
 }
 
+/* language selection bar */
+
+#lang {
+    text-align: right;
+    padding:0.5rem 10.41% 0;
+}
+
+#lang a {
+    width: 3rem;
+    height: 2rem;
+    display: inline-block;
+    position: relative;
+    z-index: 4;
+    margin-left:1rem;
+    border:1px solid black;
+}
+
+.flag-pl {
+    background: linear-gradient(to bottom, white 50%, red 50%, red 100%);
+}
+
+.flag-ua {
+    background: linear-gradient(to bottom, royalblue 50%, yellow 50%, yellow 100%)
+}
+
+
 section {
     padding: 3rem 10.41%;
 }
@@ -119,7 +145,7 @@ section article p.recap {
 }
 
 .button:hover {
-    border:1px solid white;
+    border: 1px solid white;
 }
 
 /* HAMBURGER MENU (MOBILE) */
@@ -250,7 +276,7 @@ nav #right-links a:first-of-type {
 }
 
 nav #right-links a:hover {
-    color:white;
+    color: white;
     border-color: white;
 }
 
@@ -385,12 +411,10 @@ nav #right-links a:hover {
     color: #C5C5C5;
 }
 
-#search input:focus {
-    
-}
+#search input:focus {}
 
 #search input:focus::placeholder {
-    color:transparent;
+    color: transparent;
 }
 
 #search input:not(:focus)+.autocomplete {
@@ -479,7 +503,8 @@ div.autocomplete p:hover {
 
 /* How to panel */
 
-#how-to, #about-us {
+#how-to,
+#about-us {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, max(48%, 400px)));
     align-items: center;
@@ -492,7 +517,8 @@ div.autocomplete p:hover {
     position: relative;
 }
 
-#how-to>div>img, #about-us > img {
+#how-to>div>img,
+#about-us>img {
     width: 100%;
 }
 
@@ -636,8 +662,16 @@ input.read-more {
     content: "zamknij";
 }
 
+.read-more-ukr::before {
+    content: "закрити";
+}
+
 .read-more:checked::before {
-    content: "wiecej..";
+    content: "więcej..";
+}
+
+.read-more-ukr:checked::before {
+    content: "читати далі.."
 }
 
 .read-more::after {
@@ -800,7 +834,7 @@ dd {
         margin-bottom: 2rem;
     }
 
-    #mobile-app-hero > img {
+    #mobile-app-hero>img {
         height: 20rem;
         justify-self: end;
     }
@@ -827,7 +861,7 @@ dd {
     }
 
     h1 {
-        font-size:2.5rem;
+        font-size: 2.5rem;
     }
 
     #mobile-app-hero p {
@@ -843,7 +877,8 @@ dd {
     }
 
     #articles,
-    #how-to, #about-us {
+    #how-to,
+    #about-us {
         grid-template-columns: 100%;
     }
 
@@ -862,7 +897,7 @@ dd {
 
 @media screen and (max-width:950px) {
 
-    nav > img {
+    nav>img {
         margin: 30px auto 20px;
     }
 
@@ -886,7 +921,7 @@ dd {
         display: none;
     }
 
-    #mobile-app-splash > a  {
+    #mobile-app-splash>a {
         display: block;
         max-width: 25rem;
         margin: 1rem auto 0;
@@ -898,11 +933,11 @@ dd {
     }
 
     #hamburger-menu+nav {
-        margin-left:100%;
+        margin-left: 100%;
     }
 
     #hamburger-menu:checked+nav {
-        margin-left:0;
+        margin-left: 0;
     }
 
 
@@ -918,7 +953,7 @@ dd {
         background-color: rgba(49, 60, 94, 0.95);
         opacity: 0.95;
         border-radius: 0 0 1rem 1rem;
-        border:1px solid #000;
+        border: 1px solid #000;
         transition: margin .25s ease-in;
     }
 
@@ -932,11 +967,11 @@ dd {
 
     nav #right-links a:last-of-type {
         color: var(--orange);
-        background:transparent;
+        background: transparent;
     }
 
     nav #right-links a:hover {
-        color:white;
+        color: white;
         background: transparent;
     }
 }

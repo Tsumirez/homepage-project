@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Open+Sans&family=Roboto+Slab:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../scripts/search.js" type="text/javascript" defer></script>
+    <script src="../scripts/mobile-app-download.js" type="text/javascript" defer></script>
+    <script src="../scripts/gallery-scroll.js" defer></script>
+    <script src="../scripts/hamburger.js" defer></script>
+
+
+    <title>Z biletem</title>
+</head>
+
+<body>
+    <!-- Facebook messanger plugin code  (must be first thing after opening body tag)-->
+    <div id="fb-root"></div>
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "409602669206817");
+        chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v15.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/pl_PL/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <!-- Language selection bar -->
+    <div id="lang">
+        <a href="../" class="flag-pl"></a>
+        <a href="./" class="flag-ua"></a>
+    </div>
+
+    <!-- Mobile logo section -->
+    <header id="home">
+        <img src="../assets/images/logo-orange.png" alt="logo">
+        <ul>
+            <li>Zbiletem - квитки зв'язку</li>
+            <li class="header-subtext">Придбати квитки mpk, ztm i mzk</li>
+            <li class="header-subtext"><b style="color:gold;font-size:0.75rem">&#9733;&#9733;&#9733;&#9733;</b> 4,3 |
+                100k+ завантаження</li>
+            <li class="header-subtext">GET - on the App Store</li>
+        </ul>
+        <a href="https://play.google.com/store/apps/details?id=zbiletem.zbiletem">завантажити</a>
+    </header>
+
+    <!-- Main webpage -->
+    <main>
+        <!-- Mobile app download section -->
+        <section id="mobile-app-splash" class="dark-panel">
+            <input type="checkbox" name="" id="hamburger-menu">
+            <nav>
+                <img src="../assets/images/logo-white.webp" alt="logo">
+
+                <a href="#home">Почніть</a></li>
+                <a href="#search">куп білет</a>
+                <a href="#how-to">Квитки в додатку</a>
+                <a href="#cities">Для міст</a>
+
+                <div id="right-links">
+                    <a href="https://zbiletem.pl/Account/Login" class="button">Логін</a>
+                    <a href="https://play.google.com/store/apps/details?id=zbiletem.zbiletem" class="button">додаток</a>
+                </div>
+            </nav>
+
+            <div id="mobile-app-hero">
+                <h1>ми знаємо...</h1>
+                <p class="recap">
+                    Ми розуміємо, наскільки незручно буває гадати, як купити квиток на зупинці.
+                    Ми знаємо, як це важко в черзі до каси чи автомата. Дійсно. У нас були ті ж проблеми.
+                    Саме тому ми створили додаток, який полегшить ваше життя, коли ви перебуваєте в місті, в дорозі.
+                </p>
+
+                <img src="../assets/images/splash.webp" alt="aplikacja mobilna">
+
+                <aside>
+                    <img src="../assets/images/home-qr.png" alt="qr code" class="mobile-qr-download">
+
+                    <h5>Доступно на:</h5>
+
+                    <a href="https://apps.apple.com/pl/app/zbiletem-bilety-komunikacji/id1028407437?itsct=apps_box_link&itscg=30200"
+                        id="apple-badge"><img src="../assets/images/apple-download.svg" alt="apple mobile app"
+                            class="apple-badge">
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=zbiletem.zbiletem" id="android-badge">
+                        <img src="../assets/images/android-download.png" alt="android mobile app" class="android-badge">
+                    </a>
+                </aside>
+            </div>
+
+            <a href="https://play.google.com/store/apps/details?id=zbiletem.zbiletem" class="button"><!-- &hl=pl&gl=US -->
+                Завантажити програму
+            </a>
+        </section>
+
+        <!-- Search Location -->
+        <section id="search" class="dark-panel">
+            <h3>Купуйте квиток зараз</h3>
+            <label>V yakomu misti:</label>
+            <input type="text" placeholder="Назва міста.." id="city-search">
+            <div class="autocomplete"></div>
+        </section>
+
+
+        <!-- Intro/Instructions -->
+        <section id="how-to" class="light-panel">
+            <h2>Дивись, як це працює</h2>
+            <p class="recap">zbiletem — найпростіший додаток для купівлі квитків на громадський транспорт.
+                Якщо ви регулярно подорожуєте, ви оціните зручність місячного абонементу в додатку.
+                Якщо ви користуєтеся громадським транспортом лише зрідка,
+                ви можете швидко купити квиток у 3 кліки, коли вам це потрібно.</p>
+
+
+            <ol class="number">
+                <li><strong>Виберіть свій квиток у додатку</strong></li>
+                <li><strong>Оплата за кілька секунд</strong></li>
+                <li><strong>Подорожуйте вільно</strong></li>
+            </ol>
+
+            <div class="video">
+                <img src="../assets/images/how-to-vid-thumb.png" alt="">
+            </div>
+        </section>
+
+
+        <!-- more articles  -->
+
+        <section id="articles" class="light-gray-panel">
+            <h2 class="dark-header">Найпростіший спосіб отримати квитки</h2>
+            <p class="recap">Ви можете забути про черги до квиткових автоматів чи години роботи кас.
+                З квитком у смартфоні вам буде комфортніше подорожувати. І ви ніколи не втратите свій квиток.
+                Також в інтернет-магазині можна придбати абонемент для своїх близьких.</p>
+
+            <article>
+                <img src="../assets/images/about-image.webp" alt="">
+                <h2 class="dark-header">Про квитки в додатку</h2>
+                <input type="checkbox" class="read-more read-more-ukr" checked>
+                <div>
+                    <p class="recap">Кількість квитків, придбаних у мобільних додатках, постійно зростає.
+                        У додатку з квитком їх можна купити найзручніше та швидше. Після вибору способу оплати в
+                        першу покупку, інший квиток можна купити в 3 кліки за кілька секунд.
+                        Ви можете показати активний квиток у додатку для перевірки навіть офлайн. Незалежно від того, чи використовуєте ви
+                        ZTM, MPK або MZK у вашому місті, додаток zbiletem — ідеальний супутник для вас.</p>
+                </div>
+            </article>
+
+            <article>
+                <img src="../assets/images/article-image-2.webp" alt="">
+                <h2 class="dark-header">Про цю програму</h2>
+                <input type="checkbox" class="read-more read-more-ukr" checked>
+                <div>
+                    <p class="recap">Додаток zbiletem рекомендують 70% користувачів. Ти знаєш чому?
+                        Ми розробляємо його з 2015 року, прислухаючись до користувачів, тому його так цінуємо.
+                        Ми працюємо в понад 60 містах Польщі. Щодня тисячі людей подорожують комфортніше з квитком
+                        щомісяця в цій програмі. Щомісяця користувачі програми купують сотні тисяч за квиток
+                        квитки
+                        тимчасові та одноразові. З цією програмою вам не доведеться хвилюватися, чи буде працювати квитковий автомат,
+                        ви завжди можете мати його в кишені.
+                    </p>
+                </div>
+            </article>
+
+            <article id="cities">
+                <img src="../assets/images/tram.webp" alt="">
+                <h2 class="dark-header">Для міст і операторів</h2>
+                <input type="checkbox" class="read-more read-more-ukr" checked>
+                <div>
+                    <p class="recap">zbiletem — це рішення для міст, муніципалітетів і операторів громадського транспорту
+                        колективний.
+                        Ми пропонуємо комплексне рішення з продажу, активації та контролю мобільних квитків.
+                        Вся система включає: мобільний додаток користувача, інтернет-магазин, панель управління,
+                        додаток-контролер і ряд API для співпраці зі сторонніми рішеннями.
+                        Додаток zbiletem можна впровадити як у великих, так і в малих містах за кілька днів
+                        тижнів. Це дешевше порівняно з іншими, які потребують персоналу або дорогого обладнання,
+                        канали збуту квитків на громадський транспорт.</p>
+
+                    <p class="recap">Серед наших рішень ви також знайдете першу в Польщі систему активації квитків
+                        на основі QR-кодів у транспортних засобах.</p>
+
+                    <p class="recap">Ваші квитки можуть бути доступні в додатку zbiletem.pl лише за кілька тижнів. Напишіть
+                        на адресу <a href="mailto:kontakt@zbiletem.pl">kontakt@zbiletem.pl</a>, щоб домовитися про зустріч чи розмову.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Frequently Asked Questions -->
+
+        <section id="faq" class="light-panel">
+
+            <h2>Питання що часто задаються</h2>
+
+            <article class="light-gray-panel">
+                <dl>
+
+                    <input type="checkbox" id="FAQ-1">
+                    <dt>
+                        <label for="FAQ-1">Я купив квиток, але не бачу його в додатку. Що я повинен зробити?</label>
+                    </dt>
+                    <dd>
+                        Найчастіше причиною відсутності квитка в додатку є неправильно вказаний номер телефону
+                        під час покупки. Якщо ви не бачите свій квиток, зв’яжіться з нами електронною поштою
+                        на <a href="mailto:kontakt@zbiletem.pl">kontakt@zbiletem.pl</a> або в соціальні мережі
+                        надання правильного номера телефону та адреси електронної пошти, вказані при купівлі квитка. Номер виправимо
+                        для вас і повідомте вам.
+                    </dd>
+
+                    <input type="checkbox" id="FAQ-2">
+                    <dt> <label for="FAQ-2">Як видалити платіжну картку з мобільного додатку?</label></dt>
+                    <dd>Додану платіжну картку можна видалити при купівлі одного квитка. Потім потрібно натиснути
+                        у «вибрати спосіб оплати» і коли з’явиться список із вашою карткою,
+                        просто перемістіть цю плитку вліво. Потім натисніть на червоний хрест і спосіб оплати
+                        буде видалено.
+                    </dd>
+
+                    <input type="checkbox" id="FAQ-3">
+                    <dt><label for="FAQ-3">Чи потрібно активувати один квиток після покупки?</label></dt>
+                    <dd>У більшості міст проста покупка квитка є його активацією, і більше нічого робити не потрібно. Інакше
+                        знаходиться у Варшаві, де одноразові та часові квитки необхідно активувати скануванням коду
+                        QR, який ви знайдете на спеціальних наклейках у транспорті або на воротах метро.</dd>
+
+                    <input type="checkbox" id="FAQ-4">
+                    <dt> <label for="FAQ-4">Чи потрібно активувати абонемент, наприклад, місячний?</label></dt>
+                    <dd>Абонементи активуються лише в Рибніку та Ястшембі-Здруй на кожну поїздку.
+                        Транспортні засоби мають наклейки на квитки з QR-кодом та NFC-міткою.
+                        Ви можете відсканувати код на наклейці або піднести до неї телефон із підтримкою NFC. Тоді квиток стає
+                        активний і змінить колір. В інших містах абонементи активуються відповідно до обраної дати
+                        початок і/або час покупки.</dd>
+
+                    <input type="checkbox" id="FAQ-5">
+                    <dt> <label for="FAQ-5">Чи можу я перенести свій MIGAWKA в Лодзі на мобільний додаток?</label></dt>
+                    <dd>На жаль ні. zbiletem і Migawka MPK є окремими системами. Однак пам’ятайте, що я маю офіційний квиток
+                        працює в Лодзі, і квитки в додатку дають вам ті ж права, що й квитки на пластиковій картці
+                        знімок. Тож радимо вам придбати ще один знімок у нашому додатку.</dd>
+
+                    <input type="checkbox" id="FAQ-6">
+                    <dt> <label for="FAQ-6">Чи можу я перенести в додаток квиток, збережений на картці?</label></dt>
+                    <dd>Абонемент, придбаний не в додатку/на веб-сайті з квитком, не можна використовувати
+                        перенесено в додаток. Радимо вам придбати інший квиток через наш додаток.</dd>
+
+                    <input type="checkbox" id="FAQ-7">
+                    <dt> <label for="FAQ-7">Чи можу я роздрукувати квиток?</label></dt>
+                    <dd>На жаль ні. Абонемент зберігається в додатку, тому є на контролі
+                        істотний. Ми надсилаємо підтвердження покупки квитка на електронну адресу, яка не вважається активною
+                        квиток. Винятком є ​​Слупськ, де підтвердження квитка працює як активний квиток.</dd>
+
+                    <input type="checkbox" id="FAQ-8">
+                    <dt> <label for="FAQ-8">Я зробив помилку в даних/даті квитка, як це змінити?</label></dt>
+                    <dd>Не хвилюйтеся, все можна покращити. Якщо при купівлі квитка була помилка в даних пасажира
+                        або була позначена неправильна дата початку квитка, будь ласка, напишіть нам електронний лист на адресу
+                        <a href="mailto:kontakt@zbiletem.pl">kontakt@zbiletem.pl</a> або знайдіть нас у соціальних мережах.
+                        Надайте правильні дані, і ми подбаємо про це та повідомимо вас.
+                    </dd>
+
+                    <input type="checkbox" id="FAQ-9">
+                    <dt> <label for="FAQ-9">Як повернути квиток?</label></dt>
+                    <dd>Повернення квитків можливе відповідно до правил повернення, які діють у даному місті.
+                        Подивіться на <a href="http://www.zbiletem.pl/zwrot">zbiletem.pl/zwrot</a> і перевірте, як це в
+                        твоє місто. Якщо ви хочете повернути квиток, напишіть нам на <a href="mailto:kontakt@zbiletem.pl">kontakt@zbiletem.pl</a>.
+                    </dd>
+
+                    <input type="checkbox" id="FAQ-10">
+                    <dt> <label for="FAQ-10">Що робити, якщо транзакція не вдалася, я бачу не квиток, а свій рахунок
+                        був звинувачений?
+                        </label></dt>
+                    <dd>Іноді трансакції купівлі скасовуються, наприклад, через занадто довгий час обробки. Потім квиток
+                        не генерується,
+                        але ваш банк може тимчасово показати дебет вашого рахунку. Повернення в цьому випадку
+                        має виконуватися автоматично.
+                        Зачекайте кілька годин або перевірте свій рахунок наступного дня. Якщо ви не отримаєте відшкодування,
+                        обов’язково зв’яжіться з нами за адресою <a href="mailto:kontakt@zbiletem.pl">kontakt@zbiletem.pl</a>
+                        надання номера телефону та дати здійснення операції. Ми пояснимо, і кошти вам обов'язково повернуть.
+                    </dd>
+
+                    <input type="checkbox" id="FAQ-11">
+                    <dt> <label for="FAQ-11">Чому я маю вказувати номер PESEL під час купівлі особистого квитка
+                        Періодична таблиця?</label></dt>
+                    <dd>Просимо надати номер PESEL пасажира, щоб чітко ідентифікувати власника особистого квитка та
+                        також виявити під час перевірки.
+                        Завдяки цьому, навіть якщо у вас проблеми з телефоном або розрядився акумулятор, ви можете це зробити
+                        легко подорожувати, тому що в деяких містах
+                        ми можемо перевірити дійсність вашого квитка за номером PESEL. Ваші дані в безпеці та
+                        обробляються лише для службових цілей
+                        клієнта та виконання наших зобов’язань перед вами. Контролер не має доступу до ваших даних
+                        поза контролем.
+                    </dd>
+
+                    <input type="checkbox" id="FAQ-12">
+                    <dt> <label for="FAQ-12">У мене є абонемент, а телефон не працює. Що робити вчасно
+                        КОНТРОЛЬ?</label></dt>
+                    <dd>У деяких містах, якщо розрядився акумулятор телефону, покажіть його інспектору
+                        документ, що посвідчує особу з номером PESEL.
+                        Цього достатньо, щоб перевірити, чи є у вас дійсний квиток. Контроль квитка через номер PESEL неможливий
+                        реалізовувати в містах:
+                        Рибнік, Ястшембє-Здруй, Гданськ, Гдиня, Сопот, Вейгерово, у регіональних поїздах
+                        в човні.
+                        Також пам’ятайте, що багато автобусів і потягів мають USB-роз’єми, тому добре мати їх із собою
+                        зарядний пристрій на дощовий день.
+                    </dd>
+
+                    <input type="checkbox" id="FAQ-13">
+                    <dt><label for="FAQ-13">Мого міста немає в додатку, коли воно буде?</label></dt>
+                    <dd>Хочете скористатися додатком, але вашого міста ще немає в нашому списку? Напишіть нам,
+                        які тут мають бути міста, і ми зробимо все, щоб це було :).
+                    </dd>
+                </dl>
+
+            </article>
+
+            <h4>Є ІНШЕ ЗАПИТАННЯ?
+            </h4>
+            <p>Напишіть нам електронний лист на <a href="mailto:kontakt@zbiletem.pl">kontakt@zbiletem.pl</a>. Ти можеш
+                використовуйте цю <a href="https://zbiletem.pl/kontakt">formularza.</a> Ви також знайдете нас у ЗМІ
+                соціальні. Зазвичай ми відповідаємо дуже швидко.</p>
+        </section>
+
+        <section id="about-us" class="light-gray-panel">
+            <h2>Про нас</h2>
+            <p class="recap">
+                Ми любимо природу, але кожен день живемо в містах. Ми хочемо, щоб вони були дружніми до людей і розвивалися стабільно.
+                З хорошим повітрям і зручним транспортом. Zbiletem.pl – це відповідь на наші потреби щодо простого та зручного доступу до квитків на громадський транспорт.
+                Без черг, відвідин торгових точок, заявок і всієї цієї бійки.
+            </p>
+
+            <p>Команда zbiletem.pl складається з досвідчених спеціалістів.
+                Ми з пристрастю розробляємо, кодуємо та тестуємо наш продукт, щоб забезпечити надійне та зручне рішення.
+                Ми любимо та цінуємо контакти з людьми, які користуються нашими послугами. Ми віримо, що завдяки цьому місце, де ми живемо, може ставати кращим щодня.</p>
+
+            <img src="../assets/images/about-us.webp" alt="">
+        </section>
+
+        <!-- Parnters section -->
+
+        <section id="partners">
+            <h2>Наші партнери</h2>
+            <p class="recap">Ми співпрацюємо з містами, муніципалітетами та операторами громадського транспорту для доставки
+                користувачам з рішеннями для більш комфортних подорожей. Серед наших партнерів ви знайдете як великі
+                міста та агломерації, а також менші центри чи компанії.</p>
+            <div class="gallery">
+                <p class="scroll-left"></p>
+                <div class="gallery-images">
+
+                    <img src="../assets/images/miasta/bydgoszcz.png" alt="">Bydgoszcz
+                    <img src="../assets/images/miasta/czechowice.png" alt="">Czechowice-Dziedzice
+                    <img src="../assets/images/miasta/czestochowa.png" alt="">Częstochowa
+                    <img src="../assets/images/miasta/elbląg.png" alt="">Elbląg
+                    <img src="../assets/images/miasta/gdansk.png" alt="">Gdańsk
+                    <img src="../assets/images/miasta/gdynia.png" alt="">Gdynia
+                    <img src="../assets/images/miasta/gniezno.png" alt="">Gniezno
+                    <img src="../assets/images/miasta/gorzów.png" alt="">Gorzów
+                    <img src="../assets/images/miasta/grudziadz.png" alt="">Grudziądz
+                    <img src="../assets/images/miasta/inowroclaw.png" alt="">Inowrocław
+                    <img src="../assets/images/miasta/jastrzeboe.png" alt="">Jastrzębie
+                    <img src="../assets/images/miasta/kalisz.png" alt="">Kalisz
+                    <img src="../assets/images/miasta/kielce.png" alt="">Kielce
+                    <img src="../assets/images/miasta/kraków.png" alt="">Kraków
+                    <img src="../assets/images/miasta/legnica.png" alt="">Legnica
+                    <img src="../assets/images/miasta/łódź.png" alt="">Łódź
+                    <img src="../assets/images/miasta/lublin.png" alt="">Lublin
+                    <img src="../assets/images/miasta/metropolia.png" alt="">Metropolia ZTM
+                    <img src="../assets/images/miasta/olsztyn.png" alt="">Olsztyn
+                    <img src="../assets/images/miasta/ostrowiec.png" alt="">Ostrowiec
+                    <img src="../assets/images/miasta/poznan.png" alt="">Poznań
+                    <img src="../assets/images/miasta/przemysl.png" alt="">Przemyśl
+                    <img src="../assets/images/miasta/radom.png" alt="">Radom
+                    <img src="../assets/images/miasta/rybnik.png" alt="">Rybnik
+                    <img src="../assets/images/miasta/rzeszów.png" alt="">Rzeszów
+                    <img src="../assets/images/miasta/sieradz.png" alt="">Sieradz
+                    <img src="../assets/images/miasta/skierniewice.png" alt="">Skierniewice
+                    <img src="../assets/images/miasta/słupsk.png" alt="">Słupsk
+                    <img src="../assets/images/miasta/sopot.png" alt="">Sopot
+                    <img src="../assets/images/miasta/stargard.png" alt="">Stargard
+                    <img src="../assets/images/miasta/swidnica.png" alt="">Świdnica
+                    <img src="../assets/images/miasta/szczecin.png" alt="">Szczecin
+                    <img src="../assets/images/miasta/tarnów.png" alt="">Tarnów
+                    <img src="../assets/images/miasta/tomaszów.png" alt="">Tomaszów
+                    <img src="../assets/images/miasta/torun.png" alt="">Toruń
+                    <img src="../assets/images/miasta/wałbrzych.png" alt="">Wałbrzych
+                    <img src="../assets/images/miasta/warszawa.png" alt="">Warszawa
+                    <img src="../assets/images/miasta/wejherowo.png" alt="">Wejherowo
+                    <img src="../assets/images/miasta/wloclawek.png" alt="">Włocławek
+                    <img src="../assets/images/miasta/zawiercie.png" alt="">Zawiercie
+                    <img src="../assets/images/miasta/zdunska-wola.png" alt="">Zduńska Wola
+                    <img src="../assets/images/miasta/zgierz.png" alt="">Zgierz
+                    <img src="../assets/images/miasta/zielona-gora.webp" alt="">Zielona Góra
+                </div>
+
+                <p class="scroll-right"></p>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>
