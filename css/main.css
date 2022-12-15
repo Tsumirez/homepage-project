@@ -494,7 +494,7 @@ div.autocomplete p:hover {
     position: relative;
 }
 
-#how-to>div>img {
+#how-to>div>img, #about-us > img {
     width: 100%;
 }
 
@@ -794,7 +794,7 @@ dd {
     font-size: 0.625rem;
 }
 
-/* mobile styles (for now defaults are mobile so empty) */
+/* Media queries */
 @media screen and (max-width: 1518px) {
     #search {
         z-index: 1;
@@ -808,6 +808,11 @@ dd {
 
     #mobile-app-hero > img {
         height: 20rem;
+        justify-self: end;
+    }
+
+    .mobile-qr-download {
+        width: 6rem;
     }
 }
 
@@ -827,32 +832,13 @@ dd {
         width: 120px;
     }
 
-    #mobile-app-hero {
-        grid-template-columns: 50% 50%;
-        justify-items: center;
-        column-gap: 0;
-    }
-
-    #mobile-app-hero h1 {
-        margin-left: auto;
-        grid-column: 1/-1;
-        grid-row: 1;
-        font-size: 3rem;
+    h1 {
+        font-size:2.5rem;
     }
 
     #mobile-app-hero p {
-        grid-column: 1/-1;
-        grid-row: 2;
-    }
-
-    #mobile-app-hero aside {
-        grid-column: 2;
-        grid-row: 3/5;
-    }
-
-    #mobile-app-hero > img {
-        grid-row: 3/5;
-        grid-column: 1;
+        font-size: 1rem;
+        padding-right: 1rem;
     }
 }
 
@@ -863,7 +849,7 @@ dd {
     }
 
     #articles,
-    #how-to {
+    #how-to, #about-us {
         grid-template-columns: 100%;
     }
 
@@ -871,18 +857,8 @@ dd {
         max-width: 750px;
     }
 
-    header {
-        display: flex;
-    }
-
-    nav>img {
-        display: none;
-    }
-}
-
-@media screen and (max-width:950px) {
     #mobile-app-splash nav {
-        align-items: start;
+        align-items: flex-start;
     }
 
     nav #right-links a {
@@ -890,7 +866,21 @@ dd {
     }
 }
 
-@media screen and (max-width: 790px) {
+@media screen and (max-width:950px) {
+
+    nav > img {
+        display: none;
+    }
+
+    header {
+        display: flex;
+    }
+
+    h1 {
+        width: 100%;
+        text-align: center;
+    }
+
     #mobile-app-hero {
         grid-template-columns: 100%;
     }
@@ -949,12 +939,5 @@ dd {
     nav #right-links a:hover {
         color:white;
         background: transparent;
-    }
-}
-
-@media screen and (max-width: 780px) {
-
-    #mobile-app-hero h1 {
-        width: 100%;
     }
 }
