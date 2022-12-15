@@ -386,7 +386,7 @@ nav #right-links a:hover {
 }
 
 #search input:focus {
-    outline: solid #333 2px;
+    
 }
 
 #search input:focus::placeholder {
