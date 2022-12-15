@@ -24,7 +24,6 @@ function expandiblePanelsInit() {
 
         if (realHeight > (initialHeight + 27)) {
             input.parentElement.style.paddingBottom = "6rem";
-            // alert (`${initialHeight} vs ${realHeight}`)
         } else {
             input.style.display = 'none'
         }

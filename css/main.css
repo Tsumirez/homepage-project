@@ -245,7 +245,7 @@ nav #right-links a:not(:last-of-type) {
 }
 
 nav #right-links a:first-of-type {
-    background: var(--dark-blue);
+    background: transparent;
     color: var(--orange);
 }
 
@@ -892,11 +892,11 @@ dd {
     }
 
     #hamburger-menu+nav {
-        display: none;
+        margin-left:100%;
     }
 
     #hamburger-menu:checked+nav {
-        display: flex;
+        margin-left:0;
     }
 
 
@@ -909,10 +909,11 @@ dd {
         top: 0;
         z-index: 3;
         padding-bottom: 1rem;
-        background-color: var(--dark-blue);
+        background-color: rgba(49, 60, 94, 0.95);
         opacity: 0.95;
         border-radius: 0 0 1rem 1rem;
         border:1px solid #000;
+        transition: margin .25s ease-in;
     }
 
     nav a,
