@@ -104,19 +104,22 @@ section article p.recap {
     text-align: left;
 }
 
-button {
+.button {
     color: white;
     background: var(--orange);
-    height: 3rem;
-    width: 80%;
-    margin: 1rem auto;
-    display: block;
-    border: 0px none;
-    border-radius: .5rem;
-    font-size: 1.125rem;
-    font-weight: bold;
     text-transform: uppercase;
-    cursor: pointer;
+    border: 1px solid var(--orange);
+    border-radius: .25rem;
+    font-weight: 800;
+    padding: .25rem .5rem;
+    display: inline-block;
+    text-align: center;
+    height: 2.625rem;
+    font-size: 1.25rem;
+}
+
+.button:hover {
+    border:1px solid white;
 }
 
 /* HAMBURGER MENU (MOBILE) */
@@ -234,26 +237,20 @@ nav #right-links {
 }
 
 nav #right-links a {
-    border: 1px solid var(--orange);
-    border-radius: .25rem;
-    font-weight: 800;
-    padding: .25rem .5rem;
     width: 150px;
-    display: inline-block;
-    text-align: center;
-    height: 2.625rem;
 }
 
 nav #right-links a:not(:last-of-type) {
     margin-right: .5rem;
 }
 
-nav #right-links a:last-of-type {
-    background: var(--orange);
-    color: white;
+nav #right-links a:first-of-type {
+    background: var(--dark-blue);
+    color: var(--orange);
 }
 
 nav #right-links a:hover {
+    color:white;
     border-color: white;
 }
 
@@ -307,13 +304,8 @@ nav #right-links a:hover {
     height: 40px;
 }
 
-#mobile-app-splash>a button {
+#mobile-app-splash>a {
     display: none;
-}
-
-button:active {
-    background: #fff;
-    color: var(--orange);
 }
 
 /* soft rounded navy color border extenting from dark blue colored panel above */
@@ -895,8 +887,10 @@ dd {
         display: none;
     }
 
-    #mobile-app-splash a>button {
+    #mobile-app-splash > a  {
         display: block;
+        max-width: 25rem;
+        margin: 1rem auto 0;
     }
 
     #hamburger-menu {
