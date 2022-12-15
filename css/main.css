@@ -165,7 +165,7 @@ section article p.recap {
 
 
 #hamburger-menu:checked {
-    background: var(--dark-blue);
+    background: transparent;
 }
 
 /* Logo and header */
@@ -595,6 +595,7 @@ input.read-more {
     display: flex;
     flex-direction: column;
     height: 100%;
+    color: var(--dark-blue);
 }
 
 .read-more+div p.recap {
@@ -623,11 +624,6 @@ input.read-more {
 .read-more:checked+div {
     max-height: var(--articles-panel-height) !important;
     min-height: var(--articles-panel-height);
-}
-
-.read-more:not(:checked)+div {
-    text-decoration: none;
-    color: var(--dark-blue)
 }
 
 .read-more::before {
@@ -861,16 +857,11 @@ dd {
 @media screen and (max-width:950px) {
 
     nav > img {
-        display: none;
+        margin: 30px auto 20px;
     }
 
     header {
         display: flex;
-    }
-
-    h1 {
-        width: 100%;
-        text-align: center;
     }
 
     #mobile-app-hero {
@@ -878,6 +869,8 @@ dd {
     }
 
     #mobile-app-hero h1 {
+        width: 100%;
+        text-align: center;
         font-size: 2.375rem;
     }
 
@@ -913,9 +906,13 @@ dd {
         position: fixed;
         width: 100vw;
         left: 0;
-        top: 73px;
+        top: 0;
         z-index: 3;
+        padding-bottom: 1rem;
         background-color: var(--dark-blue);
+        opacity: 0.95;
+        border-radius: 0 0 1rem 1rem;
+        border:1px solid #000;
     }
 
     nav a,
@@ -923,6 +920,7 @@ dd {
     nav #right-links a {
         width: 100%;
         border: 0px none;
+        font-size: 1rem;
     }
 
     nav #right-links a:last-of-type {
