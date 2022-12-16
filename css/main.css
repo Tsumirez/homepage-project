@@ -17,7 +17,7 @@ body {
     --articles-panel-height: calc((8 + 1) * 1.125rem * 1.5);
 
     color: var(--dark-gray);
-    min-width: 375px;
+    /* min-width: 375px; */
     max-width: 1920px;
     margin: 0 auto 1rem;
     font: 0.875rem/1.5 Mulish, sans-serif;
@@ -79,17 +79,20 @@ p.recap {
 
 #lang {
     text-align: right;
-    padding:0.5rem 10.41% 0;
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    padding: .5rem 2rem 0 0;
 }
 
 #lang a {
-    width: 3rem;
-    height: 2rem;
+    width: 2rem;
+    height: 1.5rem;
     display: inline-block;
     position: relative;
     z-index: 4;
-    margin-left:1rem;
-    border:1px solid black;
+    margin-left: .75rem;
+    border: 1px solid black;
 }
 
 .flag-pl {
@@ -110,7 +113,7 @@ section article {
     border-radius: 0.5rem;
     padding-bottom: 2rem;
     margin-bottom: 1rem;
-    min-width: 335px;
+    /* min-width: 335px; */
     margin-left: -15px;
 }
 
@@ -203,8 +206,10 @@ header {
     align-items: center;
     justify-content: space-around;
     background: #fff;
-    position: relative;
+    top: 0;
+    width: 100%;
     z-index: 4;
+    position: absolute;
     display: none;
 }
 
@@ -231,17 +236,21 @@ header ul {
 section#mobile-app-splash {
     position: relative;
     padding-top: 2rem;
+    padding-bottom: 2rem;
     z-index: 3;
     overflow-x: clip;
 }
 
+/* Top navigation & links */
+
 #mobile-app-splash nav {
+    margin-top: 1rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-/* Top navigation & links */
+
 nav a {
     color: var(--orange);
     text-transform: uppercase;
@@ -287,7 +296,7 @@ nav #right-links a:hover {
     /* grid-template-columns: 35% auto auto; */
     grid-template-columns: repeat(20, 1fr);
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 4rem;
     row-gap: 2rem;
 }
 
@@ -392,7 +401,7 @@ nav #right-links a:hover {
 
 #search input {
     height: 3rem;
-    min-width: 335px;
+    min-width: 280px;
     width: 35.3%;
     display: block;
     margin: 0.5rem auto 3rem;
@@ -427,7 +436,7 @@ nav #right-links a:hover {
     max-height: max-content;
     transition: opacity 1s;
     background: #fff;
-    min-width: 335px;
+    min-width: 280px;
     width: 35.3%;
     min-height: 3rem;
     margin: -6rem auto 0;
@@ -725,7 +734,7 @@ dt>label {
 }
 
 dt {
-    min-width: 280px;
+    /* min-width: 280px; */
     color: var(--dark-blue);
     font: bold 1.125rem/1.5 Mulish, sans-serif;
     padding-top: 1rem;
@@ -896,6 +905,14 @@ dd {
 }
 
 @media screen and (max-width:950px) {
+    #lang {
+        padding: .5rem 1rem 0 0;
+    }
+
+    #lang a {
+        display: block;
+        margin: 0 0 .5rem auto;
+    }
 
     nav>img {
         margin: 30px auto 20px;
@@ -907,12 +924,14 @@ dd {
 
     #mobile-app-hero {
         grid-template-columns: 100%;
+        gap:0;
     }
 
     #mobile-app-hero h1 {
         width: 100%;
-        text-align: center;
+        white-space: nowrap;
         font-size: 2.375rem;
+        margin-top:5rem;
     }
 
 
@@ -930,10 +949,6 @@ dd {
     #hamburger-menu {
         display: flex;
         flex-direction: column;
-    }
-
-    #hamburger-menu+nav {
-        margin-left: 100%;
     }
 
     #hamburger-menu:checked+nav {
@@ -955,6 +970,8 @@ dd {
         border-radius: 0 0 1rem 1rem;
         border: 1px solid #000;
         transition: margin .25s ease-in;
+        margin-top: 0;
+        margin-left: 100%;
     }
 
     nav a,
