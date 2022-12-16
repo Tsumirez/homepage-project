@@ -57,10 +57,10 @@ searchInput.addEventListener("input", debouncedCitySearch());
 
 //debounce function for user input in serch box. Attach this as it's event handler.
 function debouncedCitySearch() {
-    let z = null;
+    let pendingCall = null;
     return (e) => {
-        clearTimeout(z);
-        z = setTimeout(() => callCitiesApi(e), 1000);
+        clearTimeout(pendingCall);
+        pendingCall = setTimeout(() => callCitiesApi(e), 1000);
     }
 }
 
