@@ -82,7 +82,7 @@ p.recap {
     position: absolute;
     z-index: 5;
     width: 100%;
-    padding: .5rem 2rem 0 0;
+    padding: .5rem 10.41% 0 0;
 }
 
 #lang a {
@@ -901,6 +901,10 @@ dd {
 
     nav #right-links a {
         display: block;
+    }
+
+    nav #right-links a:not(:last-of-type) {
+        margin-right:0;
     }
 }
 
