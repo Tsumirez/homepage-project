@@ -2,6 +2,7 @@ let searchInput = document.getElementById("city-search");
 let autoCompleteDiv = document.getElementsByClassName("autocomplete")[0];
 
 //Map object containing names of cities and link names for them
+/*
 cities = new Map();
 cities.set('Bydgoszcz', 'bydgoszcz');
 cities.set('Czechowice-Dziedzice', 'czechowicedziedzice');
@@ -35,6 +36,7 @@ cities.set('Włocławek', 'wloclawek');
 cities.set('Zawiercie', 'zawiercie');
 cities.set('Zduńska Wola', 'zdunskawola');
 cities.set('Zgierz', 'zgierz');
+*/
 
 /*Event listener for user typing in search input if using pre-coded cities and links list above
 
