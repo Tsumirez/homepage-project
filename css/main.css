@@ -387,6 +387,8 @@ nav #right-links a:hover {
     margin-right: auto;
     text-align: center;
     z-index: 3;
+    border-radius: .25rem;
+    box-shadow: 0 0 .5rem #333;
 }
 
 #search h3 {
