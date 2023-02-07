@@ -610,7 +610,7 @@ ol.number li strong {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, max(48%, 400px)));
     justify-content: center;
-    align-items: start;
+    /* align-items: start; */
     gap: 1rem 2rem;
 }
 
@@ -626,10 +626,10 @@ ol.number li strong {
     position: relative;
 }
 
-#articles article:last-of-type:not(:nth-of-type(even)) {
+/* #articles article:last-of-type:not(:nth-of-type(even)) {
     grid-column: 1/-1;
     max-width: none;
-}
+} */
 
 input.read-more {
     cursor: pointer;
@@ -735,8 +735,12 @@ input.read-more {
 /* FAQ */
 
 #faq>article {
-    padding-bottom: 1rem;
+    padding: 4rem 0;
     margin-bottom: 2rem;
+}
+
+#faq > p {
+    padding-left: 3%;
 }
 
 dl input[type='checkbox'] {
@@ -755,11 +759,15 @@ dt {
     /* min-width: 280px; */
     color: var(--dark-blue);
     font: bold 1.125rem/1.5 Mulish, sans-serif;
-    padding-top: 1rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(49, 60, 94, 0.1);
 }
 
-dl>dt:not(dt:first-child) {
-    border-top: 1px solid rgba(49, 60, 94, 0.1);
+dt:first-of-type {
+    padding-top: 0;
+    margin-top: 0;
+    border-top: 0px none;
 }
 
 dt>label::after {
@@ -787,9 +795,14 @@ input:checked+dt>label::after {
 dd {
     max-height: 0;
     overflow: hidden;
-    margin-bottom: 1.25rem;
     transition: max-height .5s;
-    padding: 1rem 0 0 3%;
+    padding-left: 3%;
+}
+
+dd::before {
+    content:"";
+    display:block;
+    height: 1rem;
 }
 
 /* About us section - main styles are shared in How to section */
