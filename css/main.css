@@ -268,7 +268,7 @@ nav a:hover {
     color: #fff;
 }
 
-nav img {
+nav a:first-of-type {
     margin-right: auto;
 }
 
@@ -957,7 +957,7 @@ dd {
         display: none;
     }
 
-    #mobile-app-splash>a {
+    #mobile-app-splash > a {
         display: block;
         max-width: 25rem;
         margin: 1rem auto 0;
@@ -997,6 +997,10 @@ dd {
         width: 100%;
         border: 0px none;
         font-size: 1rem;
+    }
+
+    nav a:first-of-type {
+        margin-bottom: 1.5rem;
     }
 
     nav #right-links a:last-of-type {
