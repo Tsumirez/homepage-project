@@ -19,7 +19,7 @@ body {
     color: var(--dark-gray);
     /* min-width: 375px; */
     margin: 0 auto 1rem;
-    font: 0.875rem/1.5 Mulish, sans-serif;
+    font: 1rem/1.5 Mulish, sans-serif;
     border: 1px solid #bbbbc0;
     overflow-x: hidden;
     background-color: #f3f3f3;
@@ -32,24 +32,33 @@ main {
 
 h1 {
     color: var(--orange);
-    font-size: 3.45rem;
+    /* font-size: 3.45rem; */
+    font-size: 5.375rem;
     margin: 0 auto;
 }
 
 h2 {
     margin-bottom: 2rem;
-    font-size: 2rem;
+    /* font-size: 2rem; */
+    font-size: 4.625rem;
     color: var(--dark-blue);
     text-align: center;
     grid-column: 1/-1;
 }
 
 h3 {
-    font-size: 1.625rem;
+    /* font-size: 1.625rem; */
+    font-size: 2.375rem;
+    line-height: 2.625rem;
+    margin: 3rem 0 1rem;
+    color:var(--dark-blue);
+    
 }
 
 h4 {
-    font-size: 1.125rem;
+    /* font-size: 1.125rem; */
+    font-size: 3.125rem;
+    margin:4rem 3%;
 }
 
 h5 {
@@ -69,11 +78,11 @@ h5 {
 }
 
 p {
-    margin: 2rem 0;
+    margin-bottom: 2rem;
 }
 
 p.recap {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     max-width: 812px;
     text-align: center;
     grid-column: 1/-1;
@@ -119,7 +128,7 @@ section article {
     padding-bottom: 2rem;
     margin-bottom: 1rem;
     /* min-width: 335px; */
-    margin-left: -15px;
+    /* margin-left: -15px; */
 }
 
 section article>*:not(:first-child) {
@@ -397,7 +406,9 @@ nav #right-links a:hover {
 
 #search h3 {
     margin: 0 0 4rem;
-    font-size: 2.5rem;
+    /* font-size: 2.5rem; */
+    font-size: 3.75rem;
+    color:#f3f3f3
 }
 
 #search label {
@@ -523,7 +534,7 @@ div.autocomplete p:hover {
 #about-us {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, max(48%, 400px)));
-    align-items: center;
+    align-items: start;
     justify-content: center;
     gap: 1rem;
 }
@@ -563,29 +574,29 @@ ol.number {
     list-style: none;
     counter-reset: instructions;
     color: #313c5e;
-    font: bold 1rem/1.125rem "Roboto Slab", sans-serif;
+    font: bold 2.375rem/2.625rem "Roboto Slab", sans-serif;
     text-transform: uppercase;
 }
 
 ol.number li {
-    margin: 1rem 0;
-    padding-left: 53px;
+    margin-bottom: 1rem;
+    /* padding-left: 53px; */
+    display: flex;
+    align-items: center;
 }
 
 ol.number li::before {
     counter-increment: instructions;
     content: counter(instructions);
-    width: 44px;
-    height: 44px;
-    display: inline-block;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
     background: #313c5e;
     color: #fff;
-    font: bold 26px/44px "Roboto Slab", sans-serif;
+    font: bold 3.125rem/5rem "Roboto Slab", sans-serif;
     text-align: center;
-    margin-right: 0.5rem;
-    margin-left: -53px;
-    vertical-align: middle;
+    margin-right: 1rem;
+    /* margin-left: -53px; */
 }
 
 ol.number li strong {
