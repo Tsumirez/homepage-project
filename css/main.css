@@ -865,11 +865,26 @@ dd::before {
 /* Media queries */
 @media screen and (max-width: 1920px) {
     section#mobile-app-splash {
-        padding: 2rem calc(2.25rem + 12.604%);
+        /* padding: 2rem calc(2.25rem + 12.604%); */
+        padding: 2rem calc(15.6634% - 22.73px);
     }
 }
 
 @media screen and (max-width: 1518px) {
+    nav a {
+        font-size: 1rem;
+    }
+
+    nav img {
+        height: 80%;
+        width: 120px;
+    }
+
+    nav #right-links a {
+        height: 80%;
+        width: 120px;
+    }
+
     #search {
         z-index: 1;
         padding-top: 15%
@@ -891,20 +906,6 @@ dd::before {
 }
 
 @media screen and (max-width: 1400px) {
-
-    nav a {
-        font-size: 1rem;
-    }
-
-    nav img {
-        height: 80%;
-        width: 120px;
-    }
-
-    nav #right-links a {
-        height: 80%;
-        width: 120px;
-    }
 
     h1 {
         font-size: 2.5rem;
