@@ -356,7 +356,7 @@ nav #right-links a:hover {
     padding-top: 453.5%;
     height: 0;
     border-radius: 50%;
-    margin: -445.497% 0 0 -183.735%;
+    margin: -445.497% 0 0 -200.735%;
     background-color: #313c5e;
     position: absolute;
     z-index: -1;
@@ -370,7 +370,7 @@ nav #right-links a:hover {
     width: 453.5%;
     padding-top: 453.5%;
     border-radius: 50%;
-    margin: -444.25% 0 0 -172.4%;
+    margin: -444.25% 0 0 -187.4%;
     background-color: var(--orange);
     position: absolute;
     z-index: -1;
