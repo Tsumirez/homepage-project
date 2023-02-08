@@ -647,7 +647,6 @@ input.read-more {
 }
 
 .read-more+div {
-    cursor: pointer;
     max-height: max-content;
     overflow: hidden;
     transition: max-height 1s;
