@@ -91,22 +91,86 @@ p.recap {
 
 /* language selection bar */
 
+.blue-arrow::after {
+    content: "";
+    display: inline-block;
+    margin: 0 1rem 0.1875rem 0.75rem;
+    height: 0.4rem;
+    width: 0.4rem;
+    transform: rotate(45deg);
+    border: solid var(--dark-blue);
+    border-width: 0 1px 1px 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    transition: transform 0.25s;
+}
+
+
 #lang {
-    text-align: right;
+    cursor: pointer;
+    width:150px;
+    color: var(--dark-blue);
+    margin: 0 0 4.125rem calc(100% - 150px);
+    font-size: .75rem;
+    text-transform: uppercase;
+    position: relative;
+}
+
+#lang div {
     position: absolute;
-    z-index: 5;
     width: 100%;
-    padding: .5rem 10.41% 0 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    border-radius:  0 0 .25rem .25rem;
+}
+
+#lang ul {
+    max-height: 1.875rem;
+    list-style:none;
+    padding-bottom: .75rem;
+    background-color: #fff;
+}
+
+#lang:hover {
+    overflow:visible;
+}
+
+#lang:hover ul {
+    max-height: min-content;
+    
+}
+
+#lang ul li {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 1.5rem;
+}
+
+#lang ul li:first-of-type {
+    height: 1.875rem;
+}
+
+#lang ul li a {
+    padding: 0;
+    color: #d5d7de;
+}
+
+#lang img {
+    width: 1rem;
+    height: 1rem;
+    margin-right: .5rem;
 }
 
 #lang a {
-    width: 2rem;
+    width:100%;
+    margin: 0;
+    display: block;
     height: 1.5rem;
-    display: inline-block;
-    position: relative;
-    z-index: 4;
-    margin-left: .75rem;
-    border: 1px solid black;
+    font-size: .75rem;
+    color:#313c5e;
 }
 
 .flag-pl {
@@ -248,9 +312,7 @@ header ul {
 
 section#mobile-app-splash {
     position: relative;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding: 2rem calc((100% - 1920px) / 2 + 278px);
+    padding: 0 calc((100% - 1920px) / 2 + 278px) 2rem;
     z-index: 3;
     overflow-x: clip;
 }
@@ -258,10 +320,10 @@ section#mobile-app-splash {
 /* Top navigation & links */
 
 #mobile-app-splash nav {
-    margin-top: 1rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    flex-wrap: wrap-reverse;
 }
 
 
@@ -865,7 +927,7 @@ dd::before {
 @media screen and (max-width: 1920px) {
     section#mobile-app-splash {
         /* padding: 2rem calc(2.25rem + 12.604%); */
-        padding: 2rem calc(15.6634% - 22.73px);
+        padding: 0 calc(15.6634% - 22.73px) 2rem;
     }
 }
 
@@ -947,12 +1009,34 @@ dd::before {
 
 @media screen and (max-width:950px) {
     #lang {
-        padding: .5rem 1rem 0 0;
+        margin:1rem 0 0;
+        width: 100%;
+    }
+
+    #lang > div {
+        position: static;
+    }
+
+    #lang ul {
+        max-height: 3rem;
+    }
+
+    #lang li {
+        margin-bottom:1.25rem;
+    }
+
+    #lang ul li:first-of-type {
+        height: 3rem;
     }
 
     #lang a {
+        color: #d5d7de;
         display: block;
-        margin: 0 0 .5rem auto;
+        font-size: 1rem;
+    }
+
+    nav {
+        box-shadow: 0 .125rem .5rem #aaa
     }
 
     nav>img {
@@ -1005,7 +1089,7 @@ dd::before {
         left: 0;
         top: 0;
         z-index: 3;
-        padding-bottom: 1rem;
+        padding-bottom: 0rem;
         background-color: rgba(49, 60, 94, 0.95);
         opacity: 0.95;
         border-radius: 0 0 1rem 1rem;
@@ -1013,6 +1097,7 @@ dd::before {
         transition: margin .25s ease-in;
         margin-top: 0;
         margin-left: 100%;
+        overflow: hidden;
     }
 
     nav a,
