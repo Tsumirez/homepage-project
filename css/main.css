@@ -664,6 +664,7 @@ ol.number li::before {
     font: bold 3.125rem/5rem "Roboto Slab", sans-serif;
     text-align: center;
     margin-right: 1rem;
+    flex-shrink:0;
     /* margin-left: -53px; */
 }
 
@@ -1018,12 +1019,21 @@ dd::before {
         font-size: 2rem;
     }
 
+    h3 {
+        margin: 1rem auto;
+    }
+
     h4 {
         font-size: 1rem;
+        margin: 2rem 0 1rem 3%;
     }
 
     p {
         font-size: .875rem;
+    }
+
+    p.recap {
+        margin: 0 auto 2rem;
     }
 
     ol.number {
