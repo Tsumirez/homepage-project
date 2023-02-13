@@ -25,7 +25,7 @@ searchLinks.forEach(link => {
     link.addEventListener("click", () => setTimeout(() => citySearchInput.focus(),250))
 });
 
-//this script highlights the current page language in language select drop menu
+//this script highlights the current page language in language select drop menu and displays it on top
 let currentLangLink = defaultLangLink;
 let currentLanguageLabel = document.querySelector("#lang span");
 

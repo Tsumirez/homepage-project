@@ -91,6 +91,14 @@ p.recap {
 
 /* language selection bar */
 
+#lang-input {
+    display: none;
+}
+
+nav label {
+    margin: 0 0 4.125rem calc(100% - 150px);
+}
+
 .blue-arrow::after {
     content: "";
     display: inline-block;
@@ -105,12 +113,10 @@ p.recap {
     transition: transform 0.25s;
 }
 
-
 #lang {
     cursor: pointer;
     width:150px;
     color: var(--dark-blue);
-    margin: 0 0 4.125rem calc(100% - 150px);
     font-size: .75rem;
     text-transform: uppercase;
     position: relative;
@@ -1120,5 +1126,15 @@ dd::before {
     nav #right-links a:hover {
         color: white;
         background: transparent;
+    }
+}
+
+@media (hover:none) {
+    #lang-input:checked + label > #lang {
+        overflow: visible;
+    }
+    
+    #lang-input:checked + label > #lang  ul {
+        max-height: min-content;
     }
 }
