@@ -1014,8 +1014,13 @@ dd::before {
 }
 
 @media screen and (max-width:950px) {
-    #lang {
+    nav label {
+        width: 100%;
         margin:1rem 0 0;
+    }
+    
+    #lang {
+
         width: 100%;
     }
 
