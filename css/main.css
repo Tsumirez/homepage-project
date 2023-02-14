@@ -875,6 +875,10 @@ dd::before {
     height: 1rem;
 }
 
+#faq p:last-of-type {
+    width: min(751px, 100%);
+}
+
 /* About us section - main styles are shared in How to section */
 
 #about-us p:not(.recap) {
