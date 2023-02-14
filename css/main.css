@@ -101,6 +101,10 @@ nav label {
     margin: 0 0 4.125rem calc(100% - 150px);
 }
 
+nav a img {
+    width:150px;
+}
+
 .blue-arrow::after {
     content: "";
     display: inline-block;
@@ -958,8 +962,7 @@ dd::before {
         font-size: 1rem;
     }
 
-    nav img {
-        height: 80%;
+    nav a img {
         width: 120px;
     }
 
@@ -1017,7 +1020,7 @@ dd::before {
     }
 
     #mobile-app-splash nav {
-        align-items: flex-start;
+        align-items: center;
     }
 
     nav #right-links a {
