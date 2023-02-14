@@ -14,7 +14,7 @@ body {
     --dark-blue: #313c5e;
     --light-gray: #bbbbc0;
 
-    --articles-panel-height: calc((8 + 1) * 1.125rem * 1.5);
+    --articles-panel-height: calc((3 + 1) * 1.125rem * 1.5);
 
     color: var(--dark-gray);
     /* min-width: 375px; */
@@ -726,7 +726,7 @@ input.read-more {
 }
 
 .read-more+div p.recap {
-    margin: 1.6875rem 0 0;
+    /* margin: 1.6875rem 0 0; */
 }
 
 .read-more+div::after {
