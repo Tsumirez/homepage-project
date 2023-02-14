@@ -14,6 +14,7 @@ body {
     --dark-blue: #313c5e;
     --light-gray: #bbbbc0;
     --body-bg-color: #f3f3f3;
+    --current-page-language-font-color: #d5d7de;
 
     --articles-panel-height: calc((3 + 1) * 1.125rem * 1.5);
 
@@ -158,11 +159,6 @@ nav label {
 
 #lang ul li:first-of-type {
     height: 1.875rem;
-}
-
-#lang ul li a {
-    padding: 0;
-    color: #d5d7de;
 }
 
 #lang img {
@@ -1095,7 +1091,6 @@ dd::before {
     }
 
     #lang a {
-        color: #d5d7de;
         display: block;
         font-size: 1rem;
     }

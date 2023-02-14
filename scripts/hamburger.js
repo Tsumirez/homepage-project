@@ -38,4 +38,4 @@ languageSelect.forEach(link => {
 })
 
 currentLanguageLabel.textContent = currentLangLink.textContent;
-currentLangLink.setAttribute("style", "color: var(--dark-blue)");
+currentLangLink.setAttribute("style", "color: var(--current-page-language-font-color)");
