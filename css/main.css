@@ -948,8 +948,7 @@ dd::before {
 
 /* Media queries */
 @media screen and (max-width: 1920px) {
-    section#mobile-app-splash {
-        /* padding: 2rem calc(2.25rem + 12.604%); */
+    section {
         padding: 0 calc(15.6634% - 22.73px) 2rem;
     }
 }
