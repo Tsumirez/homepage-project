@@ -1,6 +1,6 @@
-let imageContainer = document.getElementsByClassName("gallery-images")[0];
-let leftArrow = document.querySelector(".gallery > p:first-of-type");
-let rightArrow = document.querySelector(".gallery > p:last-of-type");
+let imageContainer = document.getElementsByClassName("gallery")[0];
+let leftArrow = document.querySelector(".gallery  p:first-of-type");
+let rightArrow = document.querySelector(".gallery  p:last-of-type");
 
 
 let scrollXDistance = imageContainer.offsetWidth;
