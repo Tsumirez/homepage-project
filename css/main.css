@@ -27,8 +27,8 @@ body {
 }
 
 main {
-    max-width: 1920px;
-    margin: 0 auto;
+    /* max-width: 1920px;
+    margin: 0 auto; */
 }
 
 h1 {
@@ -190,7 +190,7 @@ nav label {
 
 
 section {
-    padding: 3rem 10.41%;
+    padding: 3rem calc((100% - 1920px) / 2 + 278px) 2rem;
 }
 
 section article {
@@ -319,7 +319,8 @@ header ul {
 
 section#mobile-app-splash {
     position: relative;
-    padding: 0 calc((100% - 1920px) / 2 + 278px) 2rem;
+    padding-top: 0; 
+    padding-bottom: 2rem;
     z-index: 3;
     overflow-x: clip;
 }
