@@ -6,6 +6,7 @@
 
 html {
     scroll-behavior: smooth;
+    /* overflow: hidden; */
 }
 
 body {
@@ -464,7 +465,7 @@ nav #right-links a:hover {
 /* SEARCH PANEL */
 
 #search {
-    padding: 5% 0 3rem;
+    padding: 5% calc(11.5% - 24px) 3rem;
     position: relative;
     background: url('../assets/images/tram-bg.webp') no-repeat 0 0/cover;
     backdrop-filter: blur(15px);
@@ -490,10 +491,19 @@ nav #right-links a:hover {
     margin: 2rem auto;
 }
 
+#search > div {
+    max-width: 536px;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+#search input, .autocomplete {
+    width:100%;
+}
+
 #search input {
     height: 3rem;
-    min-width: 280px;
-    width: 35.3%;
     display: block;
     margin: 0.5rem auto 3rem;
     border-radius: 1.5rem;
@@ -527,8 +537,6 @@ nav #right-links a:hover {
     max-height: max-content;
     transition: opacity 1s;
     background: #fff;
-    min-width: 280px;
-    width: 35.3%;
     min-height: 3rem;
     margin: -6rem auto 0;
     border-radius: 1.5rem;
@@ -606,7 +614,6 @@ div.autocomplete p:hover {
 .two-cols {
     display: grid;
     grid-template-columns: repeat(2, calc(50% - .5rem));
-    align-items: start;
     justify-content: center;
     gap: 1rem;
 }
@@ -951,7 +958,12 @@ dd::before {
 /* Media queries */
 @media screen and (max-width: 1920px) {
     section {
-        padding: 9rem calc(15.6634% - 22.73px);
+        padding: 9rem calc(10.6796% - 4.0485px);
+    }
+
+    section#mobile-app-splash {
+        /* padding-left: calc(15.6634% - 22.73px);
+        padding-right: calc(15.6634% - 22.73px); */
     }
 }
 
@@ -1007,12 +1019,6 @@ dd::before {
         margin-left: auto;
     }
 
-    #articles,
-    #how-to,
-    #about-us {
-        grid-template-columns: 100%;
-    }
-
     #articles article:last-of-type:not(:nth-of-type(even)) {
         max-width: 750px;
     }
@@ -1031,6 +1037,20 @@ dd::before {
 }
 
 @media screen and (max-width:950px) {
+    section#mobile-app-splash, section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    #articles article, #faq article {
+        width: calc(100% + 2rem);
+        margin-left: -1rem;
+    }
+
+    .two-cols {
+        grid-template-columns: 100%;
+    }
+
     h2,h3 {
         font-size: 2rem;
     }
@@ -1117,6 +1137,7 @@ dd::before {
         white-space: nowrap;
         font-size: 2.375rem;
         margin-top: 5rem;
+        margin-bottom: 1rem;
     }
 
 
@@ -1180,6 +1201,12 @@ dd::before {
     nav #right-links a:hover {
         color: white;
         background: transparent;
+    }
+}
+
+@media screen and (max-width:760px) {
+    p.recap {
+        text-align: left;
     }
 }
 
