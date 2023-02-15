@@ -962,8 +962,8 @@ dd::before {
     }
 
     section#mobile-app-splash {
-        /* padding-left: calc(15.6634% - 22.73px);
-        padding-right: calc(15.6634% - 22.73px); */
+        padding-left: calc(15.6634% - 22.73px);
+        padding-right: calc(15.6634% - 22.73px);
     }
 }
 
@@ -1130,6 +1130,10 @@ dd::before {
     #mobile-app-hero {
         grid-template-columns: 100%;
         gap: 0;
+    }
+
+    #mobile-app-hero p {
+        padding-right:0;
     }
 
     #mobile-app-hero h1 {
