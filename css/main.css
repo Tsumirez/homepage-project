@@ -41,7 +41,6 @@ h1 {
 
 h2 {
     margin-bottom: 2rem;
-    /* font-size: 2rem; */
     font-size: 4.625rem;
     color: var(--dark-blue);
     text-align: center;
@@ -61,6 +60,7 @@ h4 {
     /* font-size: 1.125rem; */
     font-size: 3.125rem;
     margin:4rem 3%;
+    letter-spacing: -0.01em;
 }
 
 h5 {
@@ -88,7 +88,7 @@ p.recap {
     max-width: 812px;
     text-align: center;
     grid-column: 1/-1;
-    margin: 2rem auto;
+    margin: 0 auto 4rem;
 }
 
 /* language selection bar */
@@ -190,14 +190,17 @@ nav a img {
 
 
 section {
-    padding: 3rem calc((100% - 1920px) / 2 + 278px) 2rem;
+    padding: 9rem calc((100% - 1920px) / 2 + 278px);
+}
+
+section > *:last-child {
+    margin-bottom: 0;
 }
 
 section article {
     background: #fff;
     border-radius: 0.5rem;
     padding-bottom: 2rem;
-    margin-bottom: 1rem;
     /* min-width: 335px; */
     /* margin-left: -15px; */
 }
@@ -600,22 +603,17 @@ div.autocomplete p:hover {
 
 /* How to panel */
 
-#how-to,
-#about-us {
+.two-cols {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, max(48%, 400px)));
+    grid-template-columns: repeat(2, calc(50% - .5rem));
     align-items: start;
     justify-content: center;
     gap: 1rem;
 }
 
-#how-to>div {
-    width: 100%;
-    position: relative;
-}
 
-#how-to>div>img,
-#about-us>img {
+#how-to div img,
+#about-us img {
     width: 100%;
 }
 
@@ -678,11 +676,7 @@ ol.number li strong {
 /* articles section */
 
 #articles {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, max(48%, 400px)));
-    justify-content: center;
-    /* align-items: start; */
-    gap: 1rem 2rem;
+
 }
 
 #articles h2 {
@@ -957,7 +951,7 @@ dd::before {
 /* Media queries */
 @media screen and (max-width: 1920px) {
     section {
-        padding: 0 calc(15.6634% - 22.73px) 2rem;
+        padding: 9rem calc(15.6634% - 22.73px);
     }
 }
 
