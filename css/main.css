@@ -505,7 +505,7 @@ nav #right-links a:hover {
 #search input {
     height: 3rem;
     display: block;
-    margin: 0.5rem auto 3rem;
+    margin: 0.5rem auto 0;
     border-radius: 1.5rem;
     font: 1.125rem/3rem Mulish, sans-serif;
     padding: 0 1rem 0 3rem;
@@ -538,7 +538,7 @@ nav #right-links a:hover {
     transition: opacity 1s;
     background: #fff;
     min-height: 3rem;
-    margin: -6rem auto 0;
+    margin: -3rem auto 0;
     border-radius: 1.5rem;
     position: absolute;
     z-index: 1;
