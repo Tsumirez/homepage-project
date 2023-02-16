@@ -19,6 +19,13 @@ body {
 
     --articles-panel-height: calc((3 + 1) * 1.125rem * 1.5);
 
+    --h1-font-size: 5.375rem;
+    --h2-font-size: 4.625rem;
+    --h3-font-size: 2.375rem;
+    --h4-font-size: 3.75rem;
+    --h5-font-size: 3.125rem;
+    --h6-font-size: .75rem;
+
     color: var(--dark-gray);
     margin: 0 auto 1rem;
     font: 1rem/1.5 Mulish, sans-serif;
@@ -29,21 +36,20 @@ body {
 
 h1 {
     color: var(--orange);
-    font-size: 5.375rem;
+    font-size: var(--h1-font-size);
     margin: 0 auto;
 }
 
 h2 {
     margin-bottom: 2rem;
-    font-size: 4.625rem;
+    font-size: var(--h2-font-size);
     color: var(--dark-blue);
     text-align: center;
     grid-column: 1/-1;
 }
 
 h3 {
-    /* font-size: 1.625rem; */
-    font-size: 2.375rem;
+    font-size: var(--h3-font-size);
     line-height: 2.625rem;
     margin: 3rem 0 1rem;
     color:var(--dark-blue);
@@ -51,13 +57,18 @@ h3 {
 }
 
 h4 {
-    /* font-size: 1.125rem; */
-    font-size: 3.125rem;
-    margin:4rem 3%;
-    letter-spacing: -0.01em;
+    color:#f3f3f3;
+    margin: 0 0 4rem;
+    font-size: var(--h4-font-size);
 }
 
 h5 {
+    margin:4rem 3%;
+    letter-spacing: -0.01em;
+    font-size: var(--h5-font-size);
+}
+
+h6 {
     font-size: 1rem;
     margin: 1rem auto;
 }
@@ -174,15 +185,6 @@ nav a img {
     color:#313c5e;
 }
 
-.flag-pl {
-    background: linear-gradient(to bottom, white 50%, red 50%, red 100%);
-}
-
-.flag-ua {
-    background: linear-gradient(to bottom, royalblue 50%, yellow 50%, yellow 100%)
-}
-
-
 section {
     padding: 9rem calc((100% - 1920px) / 2 + 278px);
 }
@@ -195,8 +197,6 @@ section article {
     background: #fff;
     border-radius: 0.5rem;
     padding-bottom: 2rem;
-    /* min-width: 335px; */
-    /* margin-left: -15px; */
 }
 
 section article>*:not(:first-child) {
@@ -208,7 +208,6 @@ section article img {
     width: 100%;
 }
 
-section article h2,
 section article p,
 section article p.recap {
     margin: 1rem 0;
@@ -471,13 +470,6 @@ nav #right-links a:hover {
     box-shadow: 0 0 .5rem #333;
 }
 
-#search h3 {
-    margin: 0 0 4rem;
-    /* font-size: 2.5rem; */
-    font-size: 3.75rem;
-    color:#f3f3f3
-}
-
 #search label {
     display: block;
     font-weight: bold;
@@ -513,8 +505,6 @@ nav #right-links a:hover {
 #search input::placeholder {
     color: #C5C5C5;
 }
-
-#search input:focus {}
 
 #search input:focus::placeholder {
     color: transparent;
@@ -630,11 +620,6 @@ div.autocomplete p:hover {
 }
 
 .dark-panel {
-    /* background: #313c5e; */
-    color: #fff;
-}
-
-.dark-panel h2 {
     color: #fff;
 }
 
@@ -642,13 +627,12 @@ ol.number {
     list-style: none;
     counter-reset: instructions;
     color: #313c5e;
-    font: bold 2.375rem/2.625rem "Roboto Slab", sans-serif;
+    font: bold var(--h3-font-size)/2.625rem "Roboto Slab", sans-serif;
     text-transform: uppercase;
 }
 
 ol.number li {
     margin-bottom: 1rem;
-    /* padding-left: 53px; */
     display: flex;
     align-items: center;
 }
@@ -674,14 +658,6 @@ ol.number li strong {
 }
 
 /* articles section */
-
-#articles {
-
-}
-
-#articles h2 {
-    grid-column: 1/-1;
-}
 
 #articles article {
     max-width: 750px;
@@ -979,7 +955,7 @@ dd::before {
         padding-top: calc(4rem + 10vw)
     }
 
-    #search h3 {
+    h4 {
         margin-bottom: 2rem;
     }
 
@@ -995,16 +971,13 @@ dd::before {
 
 @media screen and (max-width: 1440px) {
 
-    h1 {
-        font-size: 3.5rem;
-    }
-
-    h2 {
-        font-size: 3rem;
-    }
-
-    h3, #search h3 {
-        font-size: 2.5rem;
+    body {
+        --h1-font-size: 4rem;
+        --h2-font-size: 3.375rem;
+        --h3-font-size: 1.75rem;
+        --h4-font-size: 2.8125rem;
+        --h5-font-size: 2.3125rem;
+        --h6-font-size: .75rem;
     }
 
     #mobile-app-hero p {
@@ -1055,7 +1028,7 @@ dd::before {
         font-size: 2rem;
     }
 
-    #search h3 {
+    h4 {
         font-size: 1.625rem;
     }
 
@@ -1063,7 +1036,7 @@ dd::before {
         margin: 1rem auto;
     }
 
-    h4 {
+    h5 {
         font-size: 1rem;
         margin: 2rem 0 1rem 3%;
     }
