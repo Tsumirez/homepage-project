@@ -928,7 +928,7 @@ footer {
     background-color: var(--dark-blue);
     color:#fff;
     display: grid;
-    justify-content: center;
+    justify-content: space-between;
     grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
     row-gap: 5rem;
     column-gap: 1rem;
@@ -941,14 +941,12 @@ footer ul {
     border-left: 1px solid rgba(255,255,255, .2);
 }
 
-footer li {
-    margin: .75rem 0;
-}
-
-footer a {
+footer li a {
     color:#fff;
+    display: block;
     text-decoration: none;
     font-weight: bold;
+    padding: .75rem 0;
 }
 
 footer p {
@@ -1222,6 +1220,12 @@ footer p {
 @media screen and (max-width:760px) {
     p.recap {
         text-align: left;
+    }
+}
+
+@media screen and (max-width:520px) {
+    footer {
+        justify-content: space-around;
     }
 }
 
