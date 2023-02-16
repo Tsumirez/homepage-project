@@ -20,7 +20,6 @@ body {
     --articles-panel-height: calc((3 + 1) * 1.125rem * 1.5);
 
     color: var(--dark-gray);
-    /* min-width: 375px; */
     margin: 0 auto 1rem;
     font: 1rem/1.5 Mulish, sans-serif;
     border: 1px solid #bbbbc0;
@@ -28,14 +27,8 @@ body {
     background-color: var(--body-bg-color)
 }
 
-main {
-    /* max-width: 1920px;
-    margin: 0 auto; */
-}
-
 h1 {
     color: var(--orange);
-    /* font-size: 3.45rem; */
     font-size: 5.375rem;
     margin: 0 auto;
 }
@@ -465,7 +458,7 @@ nav #right-links a:hover {
 /* SEARCH PANEL */
 
 #search {
-    padding: 5% calc(11.5% - 24px) 3rem;
+    padding: 5% calc(11.5% - 24px) 7rem;
     position: relative;
     background: url('../assets/images/tram-bg.webp') no-repeat 0 0/cover;
     backdrop-filter: blur(15px);
@@ -983,11 +976,10 @@ dd::before {
 
     #search {
         z-index: 1;
-        padding-top: 15%
+        padding-top: calc(4rem + 10vw)
     }
 
     #search h3 {
-        font-size: 1.8rem;
         margin-bottom: 2rem;
     }
 
@@ -1001,9 +993,17 @@ dd::before {
     }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
 
     h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3, #search h3 {
         font-size: 2.5rem;
     }
 
@@ -1053,6 +1053,10 @@ dd::before {
 
     h2,h3 {
         font-size: 2rem;
+    }
+
+    #search h3 {
+        font-size: 1.625rem;
     }
 
     h3 {
