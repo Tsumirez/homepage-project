@@ -11,7 +11,7 @@ let defaultLangLink = document.querySelector("#lang a[href='./index.html']");
 
 //variables for touch screen device menu close functionality
 let langMenuCheckbox = document.getElementById("lang-input");
-let languageWidget = document.querySelector("#lang");
+let languageWidget = document.getElementById("lang");
 let languageWidgetClicked = false;
 
 hamburgerLinks.forEach(link => {
@@ -47,12 +47,14 @@ currentLangLink.setAttribute("style", "color: var(--current-page-language-font-c
 
 //closing the lang menu on touch devices when clicked anywhere else on the page
 document.body.addEventListener('click', (e) => {
+    console.log('zed');
     if(!languageWidgetClicked) langMenuCheckbox.checked = false;
     languageWidgetClicked=false;
 }, false);
 
 languageWidget.addEventListener('click',
     e => {
+        console.log('boomerang')
         languageWidgetClicked = true;
         e.stopPropagation();
     },false);

@@ -411,12 +411,11 @@ nav #right-links a:hover {
 .android-badge,
 .apple-badge {
     width: 150px;
-    height: 65px;
     vertical-align: middle;
 }
 
 .apple-badge {
-    height: 40px;
+
 }
 
 #mobile-app-splash>a {
