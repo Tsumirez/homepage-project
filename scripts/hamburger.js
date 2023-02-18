@@ -46,14 +46,14 @@ currentLangLink.setAttribute("style", "color: var(--current-page-language-font-c
 
 
 //closing the lang menu on touch devices when clicked anywhere else on the page
-document.body.addEventListener('click', (e) => {
-    // if(!languageWidgetClicked) langMenuCheckbox.checked = false;
-    // languageWidgetClicked=false;
-}, false);
+// document.body.addEventListener('click', (e) => {
+//     // if(!languageWidgetClicked) langMenuCheckbox.checked = false;
+//     // languageWidgetClicked=false;
+// }, false);
 
-languageWidget.addEventListener('click',
-    e => {
-        console.log('boomerang')
-        languageWidgetClicked = true;
-        e.stopPropagation();
-    }, false);
+// languageWidget.addEventListener('click',
+//     e => {
+//         console.log('boomerang')
+//         languageWidgetClicked = true;
+//         e.stopPropagation();
+//     }, false);
