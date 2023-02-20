@@ -173,6 +173,7 @@ nav a img {
     z-index: 1;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 #lang li {
@@ -1099,26 +1100,19 @@ footer p {
         line-height: 2.75rem;
     }
 
-    nav label {
+    #lang {
+        height: 3rem;
         width: 100%;
         margin:1rem 0 0;
-    }
-    
-    #lang {
-
-        width: 100%;
+        grid-template-columns: 0 1fr 0;
     }
 
-    #lang > div {
-        position: static;
+    #lang:hover {
+        height: auto;
     }
 
     #lang ul {
-        max-height: 3rem;
-    }
-
-    #lang li {
-        margin-bottom:1.25rem;
+        width: 100%;
     }
 
     #lang ul li:first-of-type {
@@ -1128,6 +1122,16 @@ footer p {
     #lang a {
         display: block;
         font-size: 1rem;
+    }
+
+    @media (hover:none) {
+        #lang-input:checked + #lang {
+            height: auto;
+        }
+
+        #lang-input:not(:checked) + #lang {
+            height: 3rem;
+        }
     }
 
     nav {
