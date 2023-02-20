@@ -99,18 +99,7 @@ p.recap {
 /* language selection bar */
 
 #lang-input {
-    /* display: none; */
-    width: 0;
-    height: 0;
-    border:0 none;
-}
-
-#lang-input:focus {
-    outline: none;
-}
-
-nav label {
-    margin: 0 0 4.125rem calc(100% - 150px);
+    display: none;
 }
 
 nav a img {
@@ -132,49 +121,64 @@ nav a img {
 }
 
 #lang {
-    /* height: 5rem; */
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    justify-content: center;
     cursor: pointer;
+    height: 1.875rem;
     width:150px;
     color: var(--dark-blue);
     font-size: .75rem;
     text-transform: uppercase;
-    position: relative;
+    /* background-color: #fff; */
+    border-radius: 0 0 .5rem .5rem;
+    overflow: hidden;
+    margin: 0 0 4.125rem calc(100% - 150px);
 }
 
-#lang div {
-    position: absolute;
+#lang::before, #lang::after {
+    content: "";
+    background: white;
     width: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    background-color: #fff;
-    border-radius:  0 0 .25rem .25rem;
+}
+
+#lang::before {
+    border-radius: 0 0 0 .5rem;
+}
+
+#lang::after {
+    border-radius: 0 0 .5rem 0;
 }
 
 #lang ul {
-    max-height: 1.875rem;
-    list-style:none;
-    padding-bottom: .75rem;
+    list-style: none;
+}
+
+#lang:hover li {
+    margin-top: 0;
 }
 
 #lang:hover {
-    overflow:visible;
+    overflow: visible;
 }
 
-#lang:hover ul {
-    max-height: min-content;
-    
+#lang:hover .blue-arrow::after {
+    border-width: 1px 0 0 1px;
+    margin-bottom: 0;
+    margin-top: 0.1875rem;
 }
 
-#lang ul li {
+#lang li:first-of-type label {
+    height: 100%;
+    z-index: 1;
     display: flex;
     align-items: center;
-    justify-content: start;
-    height: 1.5rem;
 }
 
-#lang ul li:first-of-type {
+#lang li {
     height: 1.875rem;
+    background: white;
+    position: relative;
 }
 
 #lang img {
@@ -419,10 +423,6 @@ nav #right-links a:hover {
 .apple-badge {
     width: 150px;
     vertical-align: middle;
-}
-
-.apple-badge {
-
 }
 
 #mobile-app-splash>a {
@@ -1236,11 +1236,24 @@ footer p {
 }
 
 @media (hover:none) {
-    #lang-input:focus + label > #lang {
+
+    #lang-input:checked + #lang {
         overflow: visible;
     }
-    
-    #lang-input:focus + label > #lang  ul {
-        max-height: min-content;
+
+    #lang-input + #lang {
+        overflow: hidden;
+    }
+
+    #lang-input:checked + #lang .blue-arrow::after {
+        border-width: 1px 0 0 1px;
+        margin-bottom: 0;
+        margin-top: 0.1875rem;
+    }
+
+    #lang-input:not(:checked) + #lang .blue-arrow::after {
+        border-width: 0px 1px 1px 0px;
+        margin-top: 0;
+        margin-bottom: 0.1875rem;
     }
 }
