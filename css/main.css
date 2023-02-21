@@ -133,7 +133,7 @@ nav a img {
     /* background-color: #fff; */
     border-radius: 0 0 .5rem .5rem;
     overflow: hidden;
-    margin: 0 0 4.125rem calc(100% - 150px);
+    margin: 0 0 2.125rem calc(100% - 150px);
 }
 
 #lang::before, #lang::after {
