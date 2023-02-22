@@ -307,7 +307,6 @@ header {
 .rating-stars {
     color:gold;
     font-size:0.75rem; 
-    width: 52px; 
     display:inline-block;
     position: relative;
 }
@@ -315,6 +314,7 @@ header {
 .rating-stars::after {
     content: "";
     position: absolute;
+    top:0;
     right:0;
     height:100%;
     width:10%;
