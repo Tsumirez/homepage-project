@@ -249,7 +249,7 @@ section article p.recap {
 #hamburger-menu {
     width: 2rem;
     height: 1.5rem;
-    top: 7.65rem;
+    top: 7.25rem;
     right: 2rem;
     z-index: 4;
     position: fixed;
@@ -298,10 +298,9 @@ header {
     align-items: center;
     justify-content: space-around;
     background: #fff;
-    top: 0;
     width: 100%;
     z-index: 4;
-    position: absolute;
+    position: relative;
     display: none;
 }
 
@@ -1056,7 +1055,7 @@ footer p {
 
 @media screen and (max-width:950px) {
     section#mobile-app-splash, section {
-        padding-top: 3rem;
+        padding-top: 2rem;
         padding-bottom: 3rem;
     }
 
@@ -1154,8 +1153,7 @@ footer p {
 
     #mobile-app-hero {
         grid-template-columns: 100%;
-        padding-top: 2rem;
-        margin-top:2rem;
+        margin-top: 0;
         gap: 0;
     }
 
