@@ -249,7 +249,7 @@ section article p.recap {
 #hamburger-menu {
     width: 2rem;
     height: 1.5rem;
-    top: 8rem;
+    top: 7.65rem;
     right: 2rem;
     z-index: 4;
     position: fixed;
@@ -390,6 +390,10 @@ nav #right-links a:hover {
     align-items: center;
     margin-top: 4rem;
     row-gap: 2rem;
+}
+
+#mobile-logo {
+    display: none;
 }
 
 #mobile-app-hero h1 {
@@ -931,104 +935,6 @@ dd::before {
     grid-row: 1;
 }
 
-.gallery2, .gallery3 {
-    display:flex;
-    flex-wrap: wrap;
-    height: 6rem;
-    overflow: hidden;
-    border:1px solid black;
-}
-
-.gallery2 div.slide, .gallery3 div.slide {
-    height: 100%;
-    width: 360px;
-    border:1px solid black;
-    direction: rtl;
-    transition: width 1s linear;
-    overflow: hidden;
-}
-
-.gallery2 .slide:first-of-type {
-    /* width:500px; */
-}
-
-.gallery2 div.slide div, .gallery3 div.slide div {
-    display: inline-grid;
-    grid-template-rows: auto 1.5rem;
-    grid-template-columns: 1fr;
-    height: 100%;
-    border:1px solid green;
-    margin-right: 180px;
-    transform: translateX(50%);
-}
-
-.gallery2 div.slide img, .gallery3 div.slide img {
-    justify-self: center;
-}
-
-.gallery2 div.slide p, .gallery3 div.slide p {
-  justify-self: center;
-}
-
-.gallery2:hover div.slide {
-    width: 0;
-}
-
-.gallery2:hover div.slide:first-of-type {
-    transition-delay: 0s;
-}
-
-.gallery2:hover div.slide:nth-of-type(2) {
-    transition-delay: 1s;
-}
-
-.gallery2:hover div.slide:nth-of-type(3) {
-    transition-delay: 2s;
-}
-
-.gallery2:hover div.slide:nth-of-type(4) {
-    transition-delay: 3s;
-}
-
-.gallery2:hover div.slide:nth-of-type(5) {
-    transition-delay: 4s;
-}
-
-.gallery2 div.slide:first-of-type {
-    transition-delay: 4s;
-}
-
-.gallery2 div.slide:nth-of-type(2) {
-    transition-delay: 3s;
-}
-
-.gallery2 div.slide:nth-of-type(3) {
-    transition-delay: 2s;
-}
-
-.gallery2 div.slide:nth-of-type(4) {
-    transition-delay: 1s;
-}
-
-.gallery2 div.slide:nth-of-type(5) {
-    transition-delay: 0s;
-}
-
-
-/* animation based gallery */
-
-@keyframes hide-slide {
-    0% {
-        width:360px
-    }
-
-    100% { width:0;}
-}
-
-.gallery3 div.slide:first-of-type {
-    animation: hide-slide 1s linear forwards, hide-slide 1s linear 1s reverse forwards;
-}
-
 /* Footer */
 
 footer {
@@ -1248,19 +1154,31 @@ footer p {
 
     #mobile-app-hero {
         grid-template-columns: 100%;
+        padding-top: 2rem;
+        margin-top:2rem;
         gap: 0;
     }
 
     #mobile-app-hero p {
+        grid-row: 3;
         padding-right:0;
+    }
+
+    #mobile-app-hero #mobile-logo {
+        display: block;
+        margin: 0 auto 2rem;
+        width: 110px;
+        height: 2.375rem;
+        grid-column: 1;
+        grid-row: 1;
     }
 
     #mobile-app-hero h1 {
         width: 100%;
         white-space: nowrap;
         font-size: 2.375rem;
-        margin-top: 5rem;
         margin-bottom: 1rem;
+        grid-row: 2;
     }
 
 
