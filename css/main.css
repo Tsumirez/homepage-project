@@ -304,6 +304,23 @@ header {
     display: none;
 }
 
+.rating-stars {
+    color:gold;
+    font-size:0.75rem; 
+    width: 52px; 
+    display:inline-block;
+    position: relative;
+}
+
+.rating-stars::after {
+    content: "";
+    position: absolute;
+    right:0;
+    height:100%;
+    width:10%;
+    background:#fff;
+}
+
 a {
     text-decoration: none;
 }
@@ -1118,6 +1135,8 @@ footer p {
 
     #lang ul {
         width: 100%;
+        padding-bottom: 1rem;
+        background: #fff;
     }
 
     #lang ul li:first-of-type {
