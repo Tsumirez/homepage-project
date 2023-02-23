@@ -53,7 +53,6 @@ h3 {
     line-height: 2.625rem;
     margin: 3rem 0 1rem;
     color:var(--dark-blue);
-    
 }
 
 h4 {
@@ -63,7 +62,8 @@ h4 {
 }
 
 h5 {
-    margin:4rem 3%;
+    color:var(--dark-blue);
+    margin:.25rem 3%;
     letter-spacing: -0.01em;
     font-size: var(--h5-font-size);
 }
@@ -322,6 +322,7 @@ header {
 }
 
 a {
+    color: var(--orange);
     text-decoration: none;
 }
 
@@ -705,7 +706,7 @@ input.read-more {
     color: var(--orange);
     text-decoration: underline;
     text-transform: uppercase;
-    font: bold 1.125rem/1.5 "Mulish", sans-serif;
+    font: bold .875rem/1.5 "Mulish", sans-serif;
     text-align: right;
     position: absolute;
     bottom: 2rem;
@@ -772,8 +773,8 @@ input.read-more {
     content: "";
     display: inline-block;
     margin: 0 1rem 0.1875rem 0.75rem;
-    height: 0.5rem;
-    width: 0.5rem;
+    height: 0.45rem;
+    width: 0.45rem;
     transform: rotate(45deg);
     border: solid var(--orange);
     border-width: 0 2px 2px 0;
@@ -802,7 +803,7 @@ input.read-more {
 /* FAQ */
 
 #faq>article {
-    padding: 4rem 0;
+    padding: 4rem 3%;
     margin-bottom: 2rem;
 }
 
@@ -819,7 +820,6 @@ dt>label {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 3%;
 }
 
 dt {
