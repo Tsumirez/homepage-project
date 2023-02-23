@@ -21,4 +21,6 @@ if (isItApple) {
     let headerText = document.querySelector('#mobile-header-get-call span');
     headerText.textContent = " the App Store";
 
+    let ratingNumberSpan = document.querySelector('.rating-number');
+    ratingNumberSpan.textContent = "4,6"
 }
