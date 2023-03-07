@@ -15,6 +15,7 @@ body {
     --light-gray: #bbbbc0;
     --body-bg-color: #f3f3f3;
     --current-page-language-font-color: #d5d7de;
+    --header-font-size-scaling: 0.8;
 
     --articles-panel-height: calc((3 + 1) * 1.125rem * 1.5);
 
@@ -35,20 +36,20 @@ body {
 
 h1 {
     color: var(--orange);
-    font-size: var(--h1-font-size);
+    font-size: calc(var(--h1-font-size) * var(--header-font-size-scaling));
     margin: 0 auto;
 }
 
 h2 {
     margin-bottom: 2rem;
-    font-size: var(--h2-font-size);
+    font-size: calc(var(--h2-font-size) * var(--header-font-size-scaling));
     color: var(--dark-blue);
     text-align: center;
     grid-column: 1/-1;
 }
 
 h3 {
-    font-size: var(--h3-font-size);
+    font-size: calc(var(--h3-font-size) * var(--header-font-size-scaling));
     line-height: 2.625rem;
     margin: 3rem 0 1rem;
     color:var(--dark-blue);
@@ -57,14 +58,14 @@ h3 {
 h4 {
     color:#f3f3f3;
     margin: 0 0 4rem;
-    font-size: var(--h4-font-size);
+    font-size: calc(var(--h4-font-size) * var(--header-font-size-scaling));
 }
 
 h5 {
     color:var(--dark-blue);
     margin:.25rem 3%;
     letter-spacing: -0.01em;
-    font-size: var(--h5-font-size);
+    font-size: calc(var(--h5-font-size) * var(--header-font-size-scaling));
 }
 
 h6 {
@@ -655,7 +656,7 @@ ol.number {
     list-style: none;
     counter-reset: instructions;
     color: #313c5e;
-    font: bold var(--h3-font-size)/2.625rem "Roboto Slab", sans-serif;
+    font: bold calc(var(--h3-font-size) * var(--header-font-size-scaling))/2.625rem "Roboto Slab", sans-serif;
     text-transform: uppercase;
 }
 
@@ -973,7 +974,7 @@ footer p {
 /* Media queries */
 @media screen and (max-width: 1920px) {
     section {
-        padding: 9rem calc(10.6796% - 4.0485px);
+        padding: 6rem calc(10.6796% - 4.0485px);
     }
 
     section#mobile-app-splash {
