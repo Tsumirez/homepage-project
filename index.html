@@ -6,9 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="">
-    <link
+
+
+    <!-- connect to domain of font files -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- optionally increase loading priority -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Open+Sans&family=Roboto+Slab:wght@700&display=swap">
+
+    <!-- async CSS -->
+    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');"
+        href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Open+Sans&family=Roboto+Slab:wght@700&display=swap">
+
+    <!-- no-JS fallback -->
+    <noscript>
+        <link rel="stylesheet" href="(font CSS URL here)">
+    </noscript>
+
+    <!-- <link
         href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Open+Sans&family=Roboto+Slab:wght@700&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"> -->
     <link rel="stylesheet" href="css/main.css">
     <script src="./scripts/search.js" type="text/javascript" defer></script>
     <script src="./scripts/mobile-app-download.js" type="text/javascript" defer></script>
@@ -143,9 +160,9 @@
 
             <div class="two-cols">
                 <ol class="number">
-                    <li><strong>Wybierz bilet w aplikacji</strong></li>
-                    <li><strong>Zapłać w kilka sekund</strong></li>
-                    <li><strong>Jedź bez stresu</strong></li>
+                    <li>Wybierz bilet w aplikacji</li>
+                    <li>Zapłać w kilka sekund</li>
+                    <li>Jedź bez stresu</li>
                 </ol>
 
                 <div class="video">
@@ -475,9 +492,9 @@
 
         <p>Pobierz darmową aplikację
 
-        <a href="https://apps.apple.com/pl/app/zbiletem-bilety-komunikacji/id1028407437?itsct=apps_box_link&itscg=30200"
+            <a href="https://apps.apple.com/pl/app/zbiletem-bilety-komunikacji/id1028407437?itsct=apps_box_link&itscg=30200"
                 badge><img src="./assets/images/appstore.svg" alt="apple mobile app" class="apple-badge"></a>
-        <a href="https://play.google.com/store/apps/details?id=zbiletem.zbiletem" badge><img
+            <a href="https://play.google.com/store/apps/details?id=zbiletem.zbiletem" badge><img
                     src="./assets/images/googleplay.svg" alt="android mobile app" class="android-badge"></a>
         </p>
     </footer>
