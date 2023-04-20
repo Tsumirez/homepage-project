@@ -1,6 +1,7 @@
 window.addEventListener('load', (e) => {
     var chatbox = document.getElementById('fb-customer-chat');
-    chatbox.setAttribute("page_id", "409602669206817");
+    //chatbox.setAttribute("page_id", "409602669206817"); //zbiletem fb page
+    chatbox.setAttribute("page_id", "111564121915694"); //test fb page
     chatbox.setAttribute("attribution", "biz_inbox");
     
     window.fbAsyncInit = function () {
