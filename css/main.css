@@ -233,7 +233,7 @@ header a {
 
 .header-subtext {
     font-size: 9px;
-    color: #84848a;
+    /* color: #84848a; */
 }
 
 header ul {
@@ -1157,6 +1157,7 @@ footer p {
 
     header {
         display: flex;
+        color: #333;
     }
 
     #mobile-app-hero {
