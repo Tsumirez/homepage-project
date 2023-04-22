@@ -117,7 +117,8 @@ section article>*:not(:first-child) {
 }
 
 section article img {
-    width: 100%;
+    width: 750px;
+    max-width: 100%;
 }
 
 section article p,
@@ -634,7 +635,8 @@ div.autocomplete p:hover {
 
 #how-to div img,
 #about-us img {
-    width: 100%;
+    width: 750px;
+    max-width: 100%;
 }
 
 .light-panel {
